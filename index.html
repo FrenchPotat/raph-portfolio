@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raphael Ariello - Product Manager</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo / Brand -->
+        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
+          Raphaël Ariello
+        </a>      
+
+        <!-- Menu Button for Mobile -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
+          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
+          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
+          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
+            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
+      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
+      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+    <script>
+      const links = document.querySelectorAll('nav a');
+      const current = location.pathname.split('/').pop();
+    
+      links.forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('text-teal-700', 'font-semibold');
+        }
+      });
+    </script>
+  </nav>
+
+  <!-- Hero Section -->
+  <section data-aos="fade-up" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 to-white px-6">
+    <div class="text-center max-w-2xl">
+      <h1 class="text-4xl md:text-6xl font-bold text-teal-700 mb-8">Hey there, I'm Raph 👋</h1>
+      <p class="text-lg md:text-xl text-gray-700 mb-10">
+        Product Manager crafting better digital experiences with empathy, data, and a 2350+ day Duolingo streak 🦉.
+      </p>
+      <div class="space-x-4 mt-">
+        <a href="about.html" class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg shadow-md transition">
+          Learn More
+        </a>
+        <a href="resume.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-6 rounded-lg transition">
+          View Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+ <!-- Company Logo Slider with Clean Arrows and Infinite Loop -->
+<section data-aos="fade-up"class="bg-white py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center text-teal-700 mb-8">Companies I've Worked With</h2>
+
+    <!-- Mobile: scrollable + arrows -->
+    <div class="relative sm:hidden">
+      <div id="logo-scroll" class="flex space-x-6 overflow-x-auto scroll-smooth px-2 no-scrollbar">
+
+        <!-- Actual logos -->
+        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+          <img src="logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+          <img src="logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+          <img src="logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+          <img src="logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+          <img src="logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+          <img src="logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
+        </div>
+
+      </div>
+
+      <!-- Arrows -->
+      <button id="scroll-left" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-400 hover:text-teal-600 p-2">
+        &#10094;
+      </button>
+      <button id="scroll-right" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-400 hover:text-teal-600 p-2">
+        &#10095;
+      </button>
+    </div>
+
+    <!-- Desktop Grid -->
+    <div class="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center mt-10">
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <script>
+    const scrollContainer = document.getElementById('logo-scroll');
+    document.getElementById('scroll-left').addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: -150, behavior: 'smooth' });
+    });
+    document.getElementById('scroll-right').addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: 150, behavior: 'smooth' });
+    });
+  </script>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
+    © 2025 Raphael Ariello • Made with ☕ and Tailwind CSS
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

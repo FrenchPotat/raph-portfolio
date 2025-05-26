@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Raphael Ariello</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo / Brand -->
+        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
+          Raphaël Ariello
+        </a>      
+
+        <!-- Menu Button for Mobile -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
+          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
+          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
+          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
+            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
+      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
+      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+    <script>
+      const links = document.querySelectorAll('nav a');
+      const current = location.pathname.split('/').pop();
+    
+      links.forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('text-teal-700', 'font-semibold');
+        }
+      });
+    </script>
+  </nav>
+
+  <!-- ✅ Contact Section -->
+  <main class="flex-grow">
+    <section data-aos="fade-up" class="max-w-xl mx-auto px-6 py-16 text-center">
+      <h1 class="text-4xl font-bold text-teal-700 mb-4">Let’s Connect</h1>
+      <p class="text-gray-600 mb-8">
+        Whether it's about product ideas, collaboration, or just chatting about coffee and UX — I’d love to hear from you!
+      </p>
+
+      <!-- Contact Chips -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <!-- Email Chip -->
+        <a href="mailto:raphaelariello@gmail.com" class="inline-flex items-center gap-2 bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg hover:bg-teal-200 transition">
+          📧 Email me
+        </a>
+
+        <!-- LinkedIn Chip -->
+        <a href="https://www.linkedin.com/in/rapha%C3%ABl-ariello-60626084/" target="_blank" class="inline-flex items-center gap-2 bg-gray-100 text-gray-800 text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-200 transition">
+          💼 LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
+    © 2025 Raphaël Ariello • Made with ☕ and Tailwind CSS
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Raphael Ariello</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo / Brand -->
+        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
+          Raphaël Ariello
+        </a>      
+
+        <!-- Menu Button for Mobile -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
+          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
+          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
+          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
+            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
+      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
+      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+    <script>
+      const links = document.querySelectorAll('nav a');
+      const current = location.pathname.split('/').pop();
+    
+      links.forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('text-teal-700', 'font-semibold');
+        }
+      });
+    </script>
+  </nav>
+
+  <!-- About Me Content -->
+  <section data-aos="fade-up" class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold mb-10 text-center text-teal-700">Hey, I'm Raph 👋</h1>
+
+    <!-- What I Do -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">What I Do</h2>
+      <p>
+        I’m a Product Manager with a simple goal: make complex decisions feel easy.
+
+        At <span class="font-medium text-gray-700">Verivox</span>, that means helping millions of people navigate life’s not-so-fun-but-very-important stuff — internet plans, energy tariffs, insurance contracts.
+
+        We believe customers deserve better: more clarity, less stress, and real savings. That’s our mission: save people time and money — and it’s what gets me and my team fired up every day.
+
+        Whether it’s crafting smarter user flows, testing ideas through A/B experiments, or advocating for that one customer quote from an interview — I’m here to make the journey smoother, one feature at a time.
+      </p>
+    </div>
+
+    <!-- How I Work -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">How I Work</h2>
+      <p>
+        My superpower? Empathy. I dive deep into customer pain points, and I’m passionate about discovery, experimentations,
+        and using data to make confident decisions. I’ve worked on both 0 to 1 MVPs and large-scale products, from
+        <span class="font-medium text-gray-700">Zalando</span> to <span class="font-medium text-gray-700">KaDeWe</span> and <span class="font-medium text-gray-700">CHRIST</span>.
+        I'm also a strong communicator and team builder — with this little French accent that make attending my meetings and workshops more fun.
+      </p>
+    </div>
+
+    <!-- Languages -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">Languages I Speak</h2>
+      <p>
+        I'm fluent in <strong>French, German, English</strong>, and conversational in <strong>Russian, Italian, and Spanish</strong>.
+        Fun fact: I actually learned Russian through a <span class="font-semibold text-emerald-600">2350+ day Duolingo streak</span> (and counting 🦉).
+        Language for me is not just a tool — it’s how I build empathy and understanding across cultures.
+      </p>
+    </div>
+
+    <!-- Life Outside Work -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">Life Outside of Work</h2>
+      <p>
+        When I'm not sketching wireframes or working on my next feature, I spend time with my French Bulldog, <strong>Sarah</strong>.
+        I'm a specialty coffee lover (a bit of a home barista), a proud plant dad (my apartment is basically a jungle),
+        and I have a soft spot for watches and personal finance.
+      </p>
+    </div>
+
+    <!-- What's Next -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">What's Next?</h2>
+      <p>
+        My goal is to grow into <span class="font-medium text-gray-700">product mentoring</span> — helping PMs level up, setting bold visions, and building truly impactful digital products at scale.
+
+        I’m especially drawn to the world of education and learning — whether it’s joining a mission-driven team or eventually building something of my own. I’d love to create accessible, free tools that help people grow, just like I’ve done through my own learning journey.
+        
+        Always iterating. Always learning. Always trying to pass it on.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
+    © 2025 Raphaël Ariello • Made with ☕ and Tailwind CSS
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

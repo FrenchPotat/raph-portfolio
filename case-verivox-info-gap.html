@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en" x-data="{ view: 'after' }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study – Verivox: Filling the Info Gap</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
+          Raphaël Ariello
+        </a>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
+          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
+          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
+          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
+            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
+      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
+      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
+    </div>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
+  </nav>
+
+  <!-- Case Study Content -->
+  <section data-aos="fade-up" class="max-w-3xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-teal-700 mb-4">Verivox: Filling the Info Gap</h1>
+    <p class="text-gray-500 italic mb-8">Small improvements, big trust. Incremental UX changes that solved a real customer pain point.</p>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Opportunity</h2>
+      <p>During user interviews and funnel analysis, we discovered that many customers dropped off during the contract sign-up process. The reason? A lack of clear, accessible information. Customers felt unsure — about pricing, contract terms, and what to expect. We called it “The Info Gap.”</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">My Role</h2>
+      <p>As Product Manager for broadband (B2C), I led discovery with our UX and insights teams, prioritized ideas based on impact/effort, and worked with developers to implement fast, testable changes. I was also responsible for experiment design and post-test analysis.</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Who We Designed For</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="border rounded-xl p-4 bg-teal-50">
+          <h3 class="font-semibold text-lg text-teal-700 mb-2">👩‍⚖️ Analytical Anja</h3>
+          <p class="text-sm text-gray-700">Anja dives deep, compares meticulously, and doesn’t mind spending extra for something that feels right. She's skeptical of biased advice and wants confidence before making a move.</p>
+        </div>
+        <div class="border rounded-xl p-4 bg-yellow-50">
+          <h3 class="font-semibold text-lg text-yellow-700 mb-2">🧐 Clockwork Christian</h3>
+          <p class="text-sm text-gray-700">Christian is structured, straightforward, and efficiency-driven. He’s not looking for flash — just clarity, speed, and simplicity. If a product respects his time, he’ll respect it back.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">What We Did</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>Added a pricing breakdown earlier in the funnel</li>
+        <li>Clarified contract durations and terms with progressive disclosure</li>
+        <li>Added FAQ links at key hesitation points</li>
+        <li>Tested new trust elements: review snippets, ratings, badge design</li>
+      </ul>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Experiments & Outcomes</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Pricing card A/B test:</strong> +8% increase in step conversion</li>
+        <li><strong>Trust language experiment:</strong> -14% bounce rate on review page</li>
+        <li><strong>FAQ CTA test:</strong> +23% engagement on help content</li>
+        <li>Some tests failed (badge test) — helped us cut scope and focus on real pain points</li>
+      </ul>
+    </div>
+
+    <!-- Clarifying Router Traits -->
+    <div class="mb-12" data-aos="fade-up" x-data="{ view: 'after' }">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Clarifying Router Traits</h2>
+      <p class="mb-4 text-base text-gray-700">
+        To support users with low technical affinity, we replaced complex router specs with intuitive traits: 
+        <strong>Number of people</strong>, <strong>Home size</strong>, and <strong>Internet usage</strong>. 
+        These were derived from user interviews and made manageable for our Data Management team via PIM integration.
+      </p>
+      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-6 w-40 h-10">
+        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
+             :class="view === 'after' ? 'translate-x-full' : 'translate-x-0'"></div>
+        <button class="relative w-1/2 z-10 text-sm font-medium transition"
+                :class="view === 'before' ? 'text-gray-900' : 'text-gray-500'"
+                @click="view = 'before'">Before</button>
+        <button class="relative w-1/2 z-10 text-sm font-medium transition"
+                :class="view === 'after' ? 'text-gray-900' : 'text-gray-500'"
+                @click="view = 'after'">After</button>
+      </div>
+      <div class="mb-6" x-show="view === 'before'" x-transition>
+        <img src="Before.png" alt="Router UI Before" class="rounded-lg border border-gray-200 shadow w-full">
+      </div>
+      <div class="mb-6" x-show="view === 'after'" x-transition x-cloak>
+        <img src="After.png" alt="Router UI After" class="rounded-lg border border-gray-200 shadow w-full">
+      </div>
+      <p class="mb-3 text-base text-gray-700">
+        🧪 <strong>Experiment Result:</strong> A/B testing showed a conversion uplift of <strong class="text-teal-700">+3.38%</strong>.
+        Clear, simple language helped customers feel confident about their choice.
+      </p>
+      <p class="text-base text-gray-700">
+        🤝 This was a collaborative effort with our Data Management team, ensuring the traits were scalable and maintainable across the catalog.
+      </p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Key Takeaways</h2>
+      <p>
+        Not every feature has to be flashy. Small, insight-led improvements—especially when focused on trust and clarity—can drive real results.
+        Product work is often about removing friction, not adding bells and whistles.
+      </p>
+    </div>
+
+    <a href="work.html" class="text-teal-600 font-medium hover:underline">&larr; Back to Selected Work</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
+    © 2025 Raphaël Ariello • Made with ☕ and Tailwind CSS
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

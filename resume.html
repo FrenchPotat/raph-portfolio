@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Raphael Ariello</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+   
+  <!-- Navbar -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo / Brand -->
+        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
+          Raphaël Ariello
+        </a>      
+
+        <!-- Menu Button for Mobile -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
+          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
+          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
+          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
+            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
+      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
+      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+    <script>
+      const links = document.querySelectorAll('nav a');
+      const current = location.pathname.split('/').pop();
+    
+      links.forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('text-teal-700', 'font-semibold');
+        }
+      });
+    </script>
+  </nav>
+
+  <!-- Resume Section -->
+  <section data-aos="fade-up" class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold mb-10 text-center text-teal-700">Resume</h1>
+
+    <!-- Summary -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">Summary</h2>
+      <p>
+        I’m Raphael, a Product Manager with 5+ years of experience in e-commerce and online comparison portals. 
+        I specialize in building features that solve real user pain points, using data, empathy, and clever experimentation. 
+        I thrive in both startup MVPs and mature product environments, and I'm passionate about building high-impact solutions and strong teams.
+      </p>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">Work Experience</h2>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold">Product Manager - Verivox</h3>
+        <p class="text-sm text-gray-500 mb-1">Jul 2023 – Present</p>
+        <ul class="list-disc pl-5 text-sm text-gray-700">
+          <li>Built MVP of B2B marketplace for internet providers</li>
+          <li>Led squad responsible for our Broadaband B2C features</li>
+          <li>Ran extensive experiments on the entire User Journey to improve our different key metrics</li>
+          <li>Used customer journey mapping to guide product strategy</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold">Senior Product Manager App – Apothera GmbH</h3>
+        <p class="text-sm text-gray-500 mb-1">Oct 2022 – Mar 2023</p>
+        <ul class="list-disc pl-5 text-sm text-gray-700">
+          <li>Redesigned medication & doctor search, reducing drop-offs by 30%</li>
+          <li>Increased app conversion from 1.5% to 6.4%</li>
+          <li>Created full-year roadmap and business cases for new features</li>
+          <li>Rolled out new design system and intake reminder for retention</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold">Product Manager E-Commerce – KaDeWe Group</h3>
+        <p class="text-sm text-gray-500 mb-1">Jul 2021 – Oct 2022</p>
+        <ul class="list-disc pl-5 text-sm text-gray-700">
+          <li>Grew e-com revenue from €3M to €12M FY22</li>
+          <li>Led omni-channel UX initiatives including wishlist, vouchers, and brand store UX</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold">Product Owner E-Commerce – CHRIST GmbH</h3>
+        <p class="text-sm text-gray-500 mb-1">Jul 2019 – Jun 2021</p>
+        <ul class="list-disc pl-5 text-sm text-gray-700">
+          <li>Rolled out FR and NL sites, achieving €1.4M turnover in Year 1</li>
+          <li>Increased conversion from 1.3% to 1.7% in 2021</li>
+          <li>Introduced SCRUM and shifted to customer-centric product development</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold">Jewelry Product Manager & Buyer – Valmano (CHRIST GmbH)</h3>
+        <p class="text-sm text-gray-500 mb-1">Sep 2017 – Jun 2019</p>
+        <ul class="list-disc pl-5 text-sm text-gray-700">
+          <li>Managed 3 private-label brands (€4M revenue, 1300+ SKUs)</li>
+          <li>Oversaw buying for 30 external brands across 20 suppliers (€2M budget)</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold">Buying Assistant – Zalando SE</h3>
+        <p class="text-sm text-gray-500 mb-1">Feb 2016 – Aug 2017</p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">Education</h2>
+      <ul class="list-disc pl-5 text-sm text-gray-700">
+        <li><strong>Master’s – International Purchasing</strong>, ESDES, Lyon – Thesis: Outsourced Purchasing Challenges (2013–2015)</li>
+        <li><strong>Bachelor of Business Administration</strong>, Université Catholique de Lyon (2010–2013)</li>
+        <li><strong>Baccalauréat Scientifique</strong>, Lycée Jeanne d’Arc, Mulhouse</li>
+      </ul>
+    </div>
+
+    <!-- Skills & Tools -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">Skills & Tools</h2>
+      <p>
+        Product Discovery, Product Delivery, Analytical Thinking, SCRUM<br />
+        Tools: JIRA, Asana, ClickUp<br />
+        Collaboration tools: Figma, Miro, Confluence, Notion<br />
+        Data: Google Analytics, Looker, ThoughtSpot<br />
+        A/B Testing: Optimizely (FE, Web)<br />
+        Tech: Magento (Adobe), SFCC, HTML, CSS
+      </p>
+    </div>
+
+    <!-- Languages -->
+    <div class="bg-gray-50 rounded-xl shadow-md p-6 mb-8 hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold mb-4 text-teal-600">Languages</h2>
+      <ul class="list-disc pl-5 text-sm text-gray-700">
+        <li>French – Native</li>
+        <li>German – Fluent (C2)</li>
+        <li>English – Fluent (C2)</li>
+        <li>Russian – Conversational (B1) – learned via 2350+ day Duolingo streak 🦉</li>
+        <li>Italian – Conversational (B1)</li>
+        <li>Spanish – Conversational (A2)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
+    © 2025 Raphaël Ariello • Made with ☕  and Tailwind CSS
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
