@@ -102,87 +102,117 @@
     <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Offer Page</h2>
 
-      <!-- Toggle: Device -->
-      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-3 w-44 h-10">
-        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
-             :class="device === 'mobile' ? 'translate-x-full' : 'translate-x-0'"></div>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="device === 'desktop' ? 'text-gray-900' : 'text-gray-500'"
-                @click="device = 'desktop'">Desktop</button>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="device === 'mobile' ? 'text-gray-900' : 'text-gray-500'"
-                @click="device = 'mobile'">Mobile</button>
-      </div>
+      <!-- Toggles Row (always one line; scales below 400px) -->
+      <div class="flex items-center gap-3 mb-6 flex-nowrap max-[400px]:gap-1">
+        <!-- Device -->
+        <div
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
+                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+                max-[400px]:h-8 max-[400px]:p-0.5">
+          <!-- thumb -->
+          <div
+            class="absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] bg-white rounded-full shadow transition-transform
+                  max-[400px]:inset-y-[3px] max-[400px]:left-[3px] max-[400px]:w-[calc(50%-6px)]"
+            :class="device === 'mobile' ? 'translate-x-full' : ''"></div>
 
-      <!-- Toggle: Variant -->
-      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-6 ml-3 w-44 h-10"
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="device === 'desktop' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="device = 'desktop'">Desktop</button>
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="device === 'mobile' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="device = 'mobile'">Mobile</button>
+        </div>
+
+        <!-- Variant -->
+        <div
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
+                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+                max-[400px]:h-8 max-[400px]:p-0.5"
           :class="device === 'mobile' ? 'opacity-40 pointer-events-none' : ''">
-        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
-            :class="variant === 'basket' ? 'translate-x-full' : 'translate-x-0'"></div>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="variant === 'control' ? 'text-gray-900' : 'text-gray-500'"
-                @click="variant = 'control'">Control</button>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="variant === 'basket' ? 'text-gray-900' : 'text-gray-500'"
-                @click="variant = 'basket'">Basket</button>
+          <!-- thumb -->
+          <div
+            class="absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] bg-white rounded-full shadow transition-transform
+                  max-[400px]:inset-y-[3px] max-[400px]:left-[3px] max-[400px]:w-[calc(50%-6px)]"
+            :class="variant === 'basket' ? 'translate-x-full' : ''"></div>
+
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="variant === 'control' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="variant = 'control'">Control</button>
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="variant === 'basket' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="variant = 'basket'">Basket</button>
+        </div>
       </div>
 
-      <!-- Images -->
-      <!-- Desktop: show single image based on variant -->
-      <template x-if="device==='desktop'">
-        <div class="mb-3">
-          <img :src="offerSrc(device, variant)"
-              :alt="`Offer Page · ${variant} · ${device}`"
-              class="rounded-lg border border-gray-200 shadow w-full" />
-        </div>
-      </template>
+            <!-- Images -->
+            <!-- Desktop: show single image based on variant -->
+            <template x-if="device==='desktop'">
+              <div class="mb-3">
+                <img :src="offerSrc(device, variant)"
+                    :alt="`Offer Page · ${variant} · ${device}`"
+                    class="rounded-lg border border-gray-200 shadow w-full" />
+              </div>
+            </template>
 
-      <!-- Mobile: show ALL three states side-by-side (Control, Basket, Expanded) -->
-      <template x-if="device==='mobile'">
-        <div class="grid grid-cols-2 gap-4 items-start">
-          <figure class="space-y-1">
-            <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
-            <img src="images/OP_Mobile_Control.png"
-                alt="Offer Page Control Mobile"
-                class="rounded-lg border border-gray-200 shadow w-full" />
-          </figure>
-          <figure class="space-y-1">
-            <figcaption class="text-center text-xs text-gray-600">Basket (Expanded)</figcaption>
-            <img src="images/OP_Mobile_Basket_expanded.png"
-                alt="Offer Page Basket Mobile Expanded"
-                class="rounded-lg border border-gray-200 shadow w-full" />
-          </figure>
-        </div>
-      </template>
-    </div>
+            <!-- Mobile: show ALL three states side-by-side (Control, Basket, Expanded) -->
+            <template x-if="device==='mobile'">
+              <div class="grid grid-cols-2 gap-4 items-start">
+                <figure class="space-y-1">
+                  <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
+                  <img src="images/OP_Mobile_Control.png"
+                      alt="Offer Page Control Mobile"
+                      class="rounded-lg border border-gray-200 shadow w-full" />
+                </figure>
+                <figure class="space-y-1">
+                  <figcaption class="text-center text-xs text-gray-600">Basket (Expanded)</figcaption>
+                  <img src="images/OP_Mobile_Basket_expanded.png"
+                      alt="Offer Page Basket Mobile Expanded"
+                      class="rounded-lg border border-gray-200 shadow w-full" />
+                </figure>
+              </div>
+            </template>
+          </div>
     
     <!-- Options Page (same controls) -->
     <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Options Page</h2>
 
-      <!-- Toggle: Device -->
-      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-3 w-44 h-10">
-        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
-             :class="device === 'mobile' ? 'translate-x-full' : 'translate-x-0'"></div>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="device === 'desktop' ? 'text-gray-900' : 'text-gray-500'"
-                @click="device = 'desktop'">Desktop</button>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="device === 'mobile' ? 'text-gray-900' : 'text-gray-500'"
-                @click="device = 'mobile'">Mobile</button>
-      </div>
+      <!-- Toggles Row -->
+      <div class="flex items-center gap-3 mb-6 flex-nowrap max-[400px]:gap-1">
+        <!-- Toggle: Device -->
+        <div
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
+                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+                max-[400px]:h-8 max-[400px]:p-0.5">
+          <div
+            class="absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] bg-white rounded-full shadow transition-transform
+                  max-[400px]:inset-y-[3px] max-[400px]:left-[3px] max-[400px]:w-[calc(50%-6px)]"
+            :class="device === 'mobile' ? 'translate-x-full' : ''"></div>
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="device === 'desktop' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="device = 'desktop'">Desktop</button>
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="device === 'mobile' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="device = 'mobile'">Mobile</button>
+        </div>
 
-      <!-- Toggle: Variant -->
-      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-6 ml-3 w-44 h-10"
+        <!-- Toggle: Variant -->
+        <div
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
+                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+                max-[400px]:h-8 max-[400px]:p-0.5"
           :class="device === 'mobile' ? 'opacity-40 pointer-events-none' : ''">
-        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
-            :class="variant === 'basket' ? 'translate-x-full' : 'translate-x-0'"></div>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="variant === 'control' ? 'text-gray-900' : 'text-gray-500'"
-                @click="variant = 'control'">Control</button>
-        <button class="relative w-1/2 z-10 text-sm font-medium"
-                :class="variant === 'basket' ? 'text-gray-900' : 'text-gray-500'"
-                @click="variant = 'basket'">Basket</button>
+          <div
+            class="absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] bg-white rounded-full shadow transition-transform
+                  max-[400px]:inset-y-[3px] max-[400px]:left-[3px] max-[400px]:w-[calc(50%-6px)]"
+            :class="variant === 'basket' ? 'translate-x-full' : ''"></div>
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="variant === 'control' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="variant = 'control'">Control</button>
+          <button class="relative w-1/2 text-sm font-medium whitespace-nowrap max-[400px]:text-xs"
+                  :class="variant === 'basket' ? 'text-gray-900' : 'text-gray-500'"
+                  @click="variant = 'basket'">Basket</button>
+        </div>
       </div>
 
       <!-- Image -->
