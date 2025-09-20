@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en" x-data="{ view: 'after' }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Case Study – Side Projects and Vibecoding</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
+          Raphaël Ariello
+        </a>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
+          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
+          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
+          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
+            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
+      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
+      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
+    </div>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
+  </nav>
+
+  <!-- Case Study Content -->
+  <section data-aos="fade-up" class="max-w-3xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-teal-700 mb-4">Side Projects and Vibecoding ✨</h1>
+    <p class="text-gray-500 italic mb-8">Exploring new tools, solving real pain points, without any technical dependency.</p>
+
+      <!-- Project 1: Glass Availability Converter -->
+    <article class="border rounded-xl p-6 bg-white/80 backdrop-blur-sm shadow-sm mb-8">
+    <header class="mb-6">
+      <h2 class="text-2xl font-semibold text-gray-900">Glass Availability Converter</h2>
+    </header>
+
+       <!-- a. Pain Point -->
+        <div class="mb-6">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Pain Point</h3>
+        <p class="text-gray-700 mb-10">
+            Smaller providers lacked the technical maturity to integrate availability APIs. Our data team enforced a standard <span class="font-semibold">.csv</span> format for internal processing, but differing encryptions and formats meant teams still had to manually manipulate files <span class="font-semibold">75%+ of the time</span>. Because this was an unglamorous task and didn’t neatly fit our OGSM, no development team could prioritize it.
+        </p>
+        </div>
+
+        <!-- b. Solution -->
+        <div class="mb-6">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Solution</h3>
+        <p class="text-gray-700 mb-10">
+            I built a simple script (with Claude) that ingests <span class="font-semibold">.xls</span> and <span class="font-semibold">.csv</span> files and transforms them into the required standardized <span class="font-semibold">.csv</span>, with correct data structure, spelling, and encryption. I then iterated into a lightweight web app on Replit with a glass UI: drag‑and‑drop file upload, data preview, and a template download for external users.
+        </p>
+        </div>
+
+        <!-- c) Demo -->
+        <div class="mb-6" x-data="{ playing: false }">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Demo</h3>
+
+        <!-- Preview state (image with play overlay) -->
+        <div class="relative" x-show="!playing" x-transition>
+            <img
+            src="images/Glass_Availability.png"
+            alt="Glass Availability Converter — screenshot preview"
+            class="w-full rounded-lg border border-gray-200 shadow"
+            />
+            <!-- Play overlay -->
+            <button
+            @click="playing = true"
+            class="absolute inset-0 flex items-center justify-center"
+            aria-label="Play demo video"
+            >
+            <span class="backdrop-blur-sm bg-black/40 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                <!-- Play icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M8 5v14l11-7-11-7z"/>
+                </svg>
+                Watch video
+            </span>
+            </button>
+        </div>
+
+        <!-- Video state -->
+        <div x-show="playing" x-transition x-cloak>
+            <video
+            controls
+            autoplay
+            class="w-full rounded-lg border border-gray-200 shadow"
+            poster="images/Glass_Availability.png"
+            >
+            <source src="videos/glass_converter.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p class="mt-2 text-sm text-gray-500">
+            Click the preview to watch the demo video.
+        </p>
+        </div>
+        
+        <!-- d. Tools used -->
+        <div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Tools used</h3>
+        <div class="flex flex-wrap gap-2">
+            <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400">Claude</span>
+            <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400">Replit</span>
+        </div>
+    </article>
+
+    <div class="mb-6">
+    <a href="work.html" class="text-teal-600 font-medium hover:underline">&larr; Back to Selected Work</a>
+    </div>    
+  </section>
+
+  <!-- Footer -->
+  <site-footer></site-footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  <script src="layout.js"></script>
+</body>
+</html>
