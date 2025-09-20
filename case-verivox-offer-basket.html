@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" x-data>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Case Study – Verivox: Offer Page Basket</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Navbar (same as info-gap) -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
+          Raphaël Ariello
+        </a>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
+          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
+          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
+          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
+            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
+      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
+      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
+    </div>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
+  </nav>
+
+  <!-- Case Study Content (same container/spacing as info-gap) -->
+  <section data-aos="fade-up" class="max-w-3xl mx-auto px-6 py-12"
+           x-data="offerBasket()">
+    <h1 class="text-4xl font-bold text-teal-700 mb-4">Verivox: Offer Page Basket</h1>
+    <p class="text-gray-500 italic mb-8">
+      Clarity drives confidence. A simple basket that made the difference.
+    </p>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Opportunity</h2>
+      <p>User feedback described the Offer Page as unstructured and sparse, with critical info missing. Customers arrived at the second step, the Options page, lacking clarity on all base information about the tariff, the monthly prices, and what comes next - creating decision anxiety.</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Hypothesis</h2>
+      <p>A persistent basket keeps key information and the primary action always visible, reducing context switching and guiding the next step. We assumed that by doing this, we could reduce the bounce rate and hence increase the conversion at this step of the funnel. </p><br/><p>As there was a difference in the performance between the mobile and desktop version, we assumed the CTA placement improvement could further improve the desktop experience.</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">My Role</h2>
+      <p>As Product Manager for Broadband, I led discovery, prioritized scope, coordinated prototyping, user testing, engineering, and owned experiment design, analysis and iteration.</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Who We Designed For</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="border rounded-xl p-4 bg-violet-50">
+          <h3 class="font-semibold text-lg text-violet-700 mb-2">🧑‍💻 Meticulous Max</h3>
+          <p class="text-sm text-gray-700">Max is savvy, fast-switching, and well-informed — but he still double-checks. He doesn't want to overpay, but hates the risk of unreliable internet. He’s a hybrid of control and curiosity.</p>
+        </div>
+        <div class="border rounded-xl p-4 bg-yellow-50">
+          <h3 class="font-semibold text-lg text-yellow-700 mb-2">🧐 Clockwork Christian</h3>
+          <p class="text-sm text-gray-700">Christian is structured, straightforward, and efficiency-driven. He’s not looking for flash — just clarity, speed, and simplicity. If a product respects his time, he’ll respect it back.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Experiments & Outcomes</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Initial Basket implementation on Mobile and Desktop:</strong> +7,01% relative conversion rate</li>
+        <li><strong>Iteration Desktop Basket (CTA visibility):</strong> further +3,02% relative conversion rate uplift by preventing below-the-fold on small screens.</li>
+      </ul>
+    </div>
+
+    <!-- Offer Page (faithful Alpine-style switches, like the Before/After in info-gap) -->
+    <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Offer Page</h2>
+
+      <!-- Toggle: Device -->
+      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-3 w-44 h-10">
+        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
+             :class="device === 'mobile' ? 'translate-x-full' : 'translate-x-0'"></div>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="device === 'desktop' ? 'text-gray-900' : 'text-gray-500'"
+                @click="device = 'desktop'">Desktop</button>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="device === 'mobile' ? 'text-gray-900' : 'text-gray-500'"
+                @click="device = 'mobile'">Mobile</button>
+      </div>
+
+      <!-- Toggle: Variant -->
+      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-6 ml-3 w-44 h-10"
+          :class="device === 'mobile' ? 'opacity-40 pointer-events-none' : ''">
+        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
+            :class="variant === 'basket' ? 'translate-x-full' : 'translate-x-0'"></div>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="variant === 'control' ? 'text-gray-900' : 'text-gray-500'"
+                @click="variant = 'control'">Control</button>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="variant === 'basket' ? 'text-gray-900' : 'text-gray-500'"
+                @click="variant = 'basket'">Basket</button>
+      </div>
+
+      <!-- Images -->
+      <!-- Desktop: show single image based on variant -->
+      <template x-if="device==='desktop'">
+        <div class="mb-3">
+          <img :src="offerSrc(device, variant)"
+              :alt="`Offer Page · ${variant} · ${device}`"
+              class="rounded-lg border border-gray-200 shadow w-full" />
+        </div>
+      </template>
+
+      <!-- Mobile: show ALL three states side-by-side (Control, Basket, Expanded) -->
+      <template x-if="device==='mobile'">
+        <div class="grid grid-cols-2 gap-4 items-start">
+          <figure class="space-y-1">
+            <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
+            <img src="images/OP_Mobile_Control.png"
+                alt="Offer Page Control Mobile"
+                class="rounded-lg border border-gray-200 shadow w-full" />
+          </figure>
+          <figure class="space-y-1">
+            <figcaption class="text-center text-xs text-gray-600">Basket (Expanded)</figcaption>
+            <img src="images/OP_Mobile_Basket_expanded.png"
+                alt="Offer Page Basket Mobile Expanded"
+                class="rounded-lg border border-gray-200 shadow w-full" />
+          </figure>
+        </div>
+      </template>
+    </div>
+    
+    <!-- Options Page (same controls) -->
+    <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Options Page</h2>
+
+      <!-- Toggle: Device -->
+      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-3 w-44 h-10">
+        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
+             :class="device === 'mobile' ? 'translate-x-full' : 'translate-x-0'"></div>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="device === 'desktop' ? 'text-gray-900' : 'text-gray-500'"
+                @click="device = 'desktop'">Desktop</button>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="device === 'mobile' ? 'text-gray-900' : 'text-gray-500'"
+                @click="device = 'mobile'">Mobile</button>
+      </div>
+
+      <!-- Toggle: Variant -->
+      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-6 ml-3 w-44 h-10"
+          :class="device === 'mobile' ? 'opacity-40 pointer-events-none' : ''">
+        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
+            :class="variant === 'basket' ? 'translate-x-full' : 'translate-x-0'"></div>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="variant === 'control' ? 'text-gray-900' : 'text-gray-500'"
+                @click="variant = 'control'">Control</button>
+        <button class="relative w-1/2 z-10 text-sm font-medium"
+                :class="variant === 'basket' ? 'text-gray-900' : 'text-gray-500'"
+                @click="variant = 'basket'">Basket</button>
+      </div>
+
+      <!-- Image -->
+      <!-- Desktop: show single image based on variant -->
+      <template x-if="device==='desktop'">
+        <div class="mb-3">
+          <img :src="optionsSrc(device, variant)"
+              :alt="`Options Page · ${variant} · ${device}`"
+              class="rounded-lg border border-gray-200 shadow w-full" />
+        </div>
+      </template>
+
+      <!-- Mobile: show BOTH states side-by-side -->
+      <template x-if="device==='mobile'">
+        <div class="grid grid-cols-2 gap-4 items-start">
+          <figure class="space-y-1">
+            <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
+            <img src="images/Options_Mobile_Control.png"
+                alt="Options Page Control Mobile"
+                class="rounded-lg border border-gray-200 shadow w-full" />
+          </figure>
+          <figure class="space-y-1">
+            <figcaption class="text-center text-xs text-gray-600">Basket Collapsed</figcaption>
+            <img src="images/Options_Mobile_Basket_collapsed.png"
+                alt="Options Page Basket Mobile"
+                class="rounded-lg border border-gray-200 shadow w-full" />
+          </figure>
+        </div>
+      </template>
+    </div>
+
+    <p class="mb-3 text-base text-gray-700">
+        🧪 <strong>Experiment Result:</strong> A/B testing showed a conversion uplift of <strong class="text-teal-700">+8,43%</strong> on Mobile and <strong class="text-teal-700">+4,91%</strong> on Desktop.
+    
+      </p>
+      <p class="mb-10 text-base text-gray-700">
+        🤝 This was a collaborative effort with our User Research team, ensuring the new experience would meet the needs of the users.
+      </p>
+
+  <!-- Desktop Iteration -->
+    <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Iteration Basket Desktop</h2>
+
+      <!-- Toggle: Basket Variant -->
+      <div class="mb-3 relative inline-flex bg-gray-100 rounded-full p-1 w-40 h-9">
+        <!-- thumb -->
+        <div class="absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] bg-white rounded-full shadow transition-transform"
+            :class="variant === 'iteration' ? 'translate-x-full' : ''"></div>
+
+        <!-- buttons -->
+        <button class="relative w-1/2 text-sm font-medium"
+                :class="variant === 'control' ? 'text-gray-900' : 'text-gray-500'"
+                @click="variant = 'control'">Control</button>
+        <button class="relative w-1/2 text-sm font-medium"
+                :class="variant === 'iteration' ? 'text-gray-900' : 'text-gray-500'"
+                @click="variant = 'iteration'">Iteration</button>
+      </div>
+
+      <!-- Image -->
+      <!-- Desktop: show single image based on variant -->
+      <template x-if="device==='desktop'">
+        <div class="mb-3">
+          <img
+            :src="iterationSrc(variant)"
+            :alt="`Basket Iteration · ${variant}`"
+            class="rounded-lg border border-gray-200 shadow w-full"
+          />
+        </div>
+      </template>
+    </div>
+
+    <p class="mb-3 text-base text-gray-700">
+        🧪 <strong>Experiment Result:</strong> The A/B test showed a further conversion uplift of <strong class="text-teal-700">+3,02%</strong>.
+    
+      </p>
+      <p class="mb-10 text-base text-gray-700">
+        🤝 This was a very quick iteration that allowed us to quickly validate an hypothesis and outperform the initial planned impact of 4% for the entire initiative.
+      </p>
+
+    <a href="work.html" class="text-teal-600 font-medium hover:underline">&larr; Back to Selected Work</a>
+  </section>
+
+  <!-- Footer -->
+  <site-footer></site-footer>
+
+  <!-- AOS init + your site layout script (same as info-gap) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init(); </script>
+  <script src="layout.js"></script>
+
+  <!-- Page script: small helpers -->
+  <script>
+    function offerBasket() {
+      return {
+        offerSrc(device, variant) {
+          const map = {
+            desktop: { control: "images/OP_Desktop_Control.png", basket: "images/OP_Desktop_Basket.png" },
+            mobile:  { control: "images/OP_Mobile_Control.png",  basket: "images/OP_Mobile_Basket.png"  }
+          };
+          return map[device][variant];
+        },
+        optionsSrc(device, variant) {
+          const map = {
+            desktop: { control: "images/Options_Desktop_Control.png", basket: "images/Options_Desktop_Basket.png" },
+            mobile:  { control: "images/Options_Mobile_Control.png",  basket: "images/Options_Mobile_Basket_collapsed.png" }
+          };
+          return map[device][variant];
+        },
+        // For the iteration section: just switch on the variant
+        iterationSrc(variant) {
+          const map = {
+            control:   "images/Basket_Control.png",
+            iteration: "images/Basket_Iteration.png"
+          };
+          return map[variant];
+        },
+      }
+    }
+  </script>
+</body>
+</html>

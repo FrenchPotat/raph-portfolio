@@ -23,7 +23,7 @@ class SiteFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
-        © 2025 Raphaël Ariello • Made with ❤️ and Tailwind CSS
+        © 2025 Raphaël Ariello • Made with ☕, ✨ and Tailwind CSS
       </footer>`;
   }
 }

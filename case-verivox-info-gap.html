@@ -58,12 +58,17 @@
 
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Opportunity</h2>
-      <p>During user interviews and funnel analysis, we discovered that many customers dropped off during the contract sign-up process. The reason? A lack of clear, accessible information. Customers felt unsure — about pricing, contract terms, and what to expect. We called it “The Info Gap.”</p>
+      <p>Through user interviews, in-page feedback, and funnel analysis across multiple steps of the journey, we found that many customers abandoned the contract sign-up process. The underlying issue was a lack of clear, accessible information. Customers were left uncertain about key aspects — such as which router to choose, who handles the contract cancellation, and what the next steps would be. We summarized this recurring pain point as “The Info Gap.”</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Hypothesis</h2>
+      <p>To be completed</p>
     </div>
 
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">My Role</h2>
-      <p>As Product Manager for broadband (B2C), I led discovery with our UX and insights teams, prioritized ideas based on impact/effort, and worked with developers to implement fast, testable changes. I was also responsible for experiment design and post-test analysis.</p>
+      <p>As Product Manager, I led discovery with our UX and Research teams, prioritized ideas based on impact/effort, and worked with developers to implement fast, testable changes. I was also responsible for the experiment set-up and post-test analysis.</p>
     </div>
 
     <div class="mb-10">
@@ -81,28 +86,18 @@
     </div>
 
     <div class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-2">What We Did</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>Added a pricing breakdown earlier in the funnel</li>
-        <li>Clarified contract durations and terms with progressive disclosure</li>
-        <li>Added FAQ links at key hesitation points</li>
-        <li>Tested new trust elements: review snippets, ratings, badge design</li>
-      </ul>
-    </div>
-
-    <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">Experiments & Outcomes</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>Pricing card A/B test:</strong> +8% increase in step conversion</li>
-        <li><strong>Trust language experiment:</strong> -14% bounce rate on review page</li>
+        <li><strong>Adding Router Traits:</strong> +3,38% relative conversion rate increase</li>
+        <li><strong>Next Steps in Offer Page</strong> +1,98% relative conversion rate increase</li>
         <li><strong>FAQ CTA test:</strong> +23% engagement on help content</li>
-        <li>Some tests failed (badge test) — helped us cut scope and focus on real pain points</li>
+        <li>Some tests failed — It helped us cut scope and focus on real pain points</li>
       </ul>
     </div>
 
     <!-- Clarifying Router Traits -->
-    <div class="mb-12" data-aos="fade-up" x-data="{ view: 'after' }">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Clarifying Router Traits</h2>
+    <div class="mb-12" x-data="{ view: 'after' }">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Adding Router Traits</h2>
       <p class="mb-4 text-base text-gray-700">
         To support users with low technical affinity, we replaced complex router specs with intuitive traits: 
         <strong>Number of people</strong>, <strong>Home size</strong>, and <strong>Internet usage</strong>. 
@@ -145,11 +140,12 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
-    © 2025 Raphaël Ariello • Made with ☕ and Tailwind CSS
-  </footer>
-
+  <site-footer></site-footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+<script>
+  AOS.init();
+</script>
+
+  <script src="layout.js"></script>
 </body>
 </html>
