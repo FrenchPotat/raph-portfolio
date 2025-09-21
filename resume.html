@@ -8,6 +8,19 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Print styles: export resume without navbar/footer/CTA */
+    @media print {
+      nav, site-footer, #export-cta { display: none !important; }
+      body { background: #ffffff !important; }
+      /* Constrain content width nicely on paper */
+      #resume-section { max-width: 800px !important; margin: 0 auto !important; padding: 0 !important; }
+      /* Prevent browsers from appending URLs after links */
+      a[href]:after { content: "" !important; }
+    }
+    /* Suggest A4 page size and margins for most browsers */
+    @page { size: A4; margin: 16mm; }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
    
@@ -71,7 +84,7 @@
   </nav>
 
   <!-- Resume Section -->
-  <section data-aos="fade-up" class="max-w-4xl mx-auto px-6 py-12">
+  <section id="resume-section" data-aos="fade-up" class="max-w-4xl mx-auto px-6 py-12">
     <h1 class="text-4xl font-bold mb-10 text-center text-teal-700">Resume</h1>
 
     <!-- Summary -->
@@ -180,12 +193,35 @@
     </div>
   </section>
 
-    <!-- Footer -->
+    <!-- Export as PDF CTA (hidden in print) -->
+  <div id="export-cta" class="fixed inset-x-0 bottom-0 z-40">
+    <div class="max-w-4xl mx-auto px-6 pb-6">
+      <button id="export-pdf" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-teal-600 text-white px-5 py-3 font-semibold shadow-lg hover:bg-teal-700 active:scale-[0.99] transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9V2h12v7"/>
+          <path d="M6 18H5a2 2 0 0 1-2-2V9h18v7a2 2 0 0 1-2 2h-1"/>
+          <rect x="8" y="14" width="8" height="8" rx="1"/>
+        </svg>
+        Export resume as PDF
+      </button>
+    </div>
+  </div>
+  <!-- Footer -->
   <site-footer></site-footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
+<script>
+    (function() {
+      var btn = document.getElementById('export-pdf');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          window.print();
+        });
+      }
+    })();
+  </script>
 
   <script src="layout.js"></script>
 </body>
