@@ -149,7 +149,7 @@
     <div class="mb-6">
       <h3 class="text-lg font-semibold text-gray-800 mb-2">Solution</h3>
       <p class="text-gray-700 mb-10">
-        I built a website scraper that captures each critical step of the user journey, takes screenshots, and compares them over time. After validating the approach, I extended it to list all products and prices at a given address and compare them with the previous run. A cron job flags price changes and posts an alert to Microsoft Teams via webhook, helping us stay competitive. After a successful PoC, I shipped a simple UI so colleagues could trigger the script on demand.
+        I built a website scraper that captures each critical step of the user journey, takes screenshots, and compares them over time. After validating the approach, I extended it to list all products and prices at a given address and compare them with the previous run. With n8n, I created an automation that flags price changes and posts an alert to Microsoft Teams via webhook, helping us stay competitive. After a successful PoC, I shipped a simple UI using Streamlit so colleagues could trigger the script on demand.
       </p>
     </div>
 
@@ -160,7 +160,7 @@
       <!-- Preview state (image with play overlay) -->
       <div class="relative" x-show="!playing" x-transition>
         <img
-          src="images/check24_scraper.jpg"
+          src="images/check24_scraper.png"
           alt="Check24 Scraper — screenshot preview"
           class="w-full rounded-lg border border-gray-200 shadow"
         />
@@ -201,7 +201,7 @@
     <div>
       <h3 class="text-lg font-semibold text-gray-800 mb-3">Tools used</h3>
       <div class="flex flex-wrap gap-2">
-        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400">Replit</span>
+        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500">n8n</span>
         <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-slate-600">ChatGPT</span>
       </div>
     </div>
