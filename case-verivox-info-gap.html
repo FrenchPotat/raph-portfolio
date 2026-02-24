@@ -13,57 +13,23 @@
 </head>
 
 <body class="bg-white text-gray-800">
-  <!-- Navbar -->
-  <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="text-xl font-bold text-teal-600 hover:text-teal-800 transition">
-          Raphaël Ariello
-        </a>
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-gray-700 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden md:flex space-x-6 items-center">
-          <a href="about.html" class="text-gray-700 hover:text-teal-600 font-medium">About Me</a>
-          <a href="resume.html" class="text-gray-700 hover:text-teal-600 font-medium">Resume</a>
-          <a href="work.html" class="text-gray-700 hover:text-teal-600 font-medium">Selected Work</a>
-          <a href="contact.html" class="text-gray-700 hover:text-teal-600 font-medium">
-            <span class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Contact me</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About Me</a>
-      <a href="resume.html" class="block text-gray-700 hover:text-teal-600">Resume</a>
-      <a href="work.html" class="block text-gray-700 hover:text-teal-600">Selected Work</a>
-      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact me</a>
-    </div>
-    <script>
-      document.getElementById('menu-btn').addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-      });
-    </script>
-  </nav>
+  <site-header></site-header>
 
   <!-- Case Study Content -->
   <section data-aos="fade-up" class="max-w-3xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-teal-700 mb-4 text-center">Verivox: Filling the Info Gap</h1>
-    <p class="text-gray-500 italic mb-8">Small improvements, big trust. Incremental UX changes that solved a real customer pain point.</p>
+    <h1 class="text-4xl font-bold text-teal-700 mb-4">Verivox: Filling the Info Gap</h1>
+    <p class="text-gray-500 italic mb-8">A multi-touchpoint initiative to reduce decision anxiety and systematically improve conversion through clarity.</p>
     
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Opportunity</h2>
-      <p>Through user interviews, in-page feedback, and funnel analysis across multiple steps of the journey, we found that many customers abandoned the contract sign-up process. The underlying issue was a lack of clear, accessible information. Customers were left uncertain about key aspects , such as which router to choose, who handles the contract cancellation, and what the next steps would be. We summarized this recurring pain point as “The Info Gap.”</p>
+      <p>Through user interviews, feedback and funnel analysis across multiple steps of the journey, we found that many customers dropped during the journey. 
+      The underlying issue was a lack of clear and accessible information that left customers uncertain about key aspects of their sign-up. 
+      <br/><br/>We summarized this recurring pain point as “The Info Gap.”</p>
     </div>
 
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Hypothesis</h2>
-      <p>To be completed</p>
+      <p>If we reduce decision ambiguity across key touchpoints (router choice, process clarity, help access), we can systematically reduce friction and improve click through rate and overall conversion.</p>
     </div>
 
     <div class="mb-10">
@@ -85,54 +51,212 @@
       </div>
     </div>
 
-    <div class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Experiments & Outcomes</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>Adding Router Traits:</strong> +3,38% relative conversion rate increase</li>
-        <li><strong>Next Steps in Offer Page</strong> +1,98% relative conversion rate increase</li>
-        <li><strong>FAQ CTA test:</strong> +23% engagement on help content</li>
-        <li>Some tests failed , It helped us cut scope and focus on real pain points</li>
-      </ul>
+    <!-- Experiment Portfolio (overview) -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-3">Experiment Portfolio</h2>
+      <p class="text-gray-700 mb-6">
+        We approached “The Info Gap” as a cohesive initiative and tackled it through a portfolio of experiments across key decision points.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <a href="#exp-router-traits" class="group border rounded-xl p-5 bg-white/80 shadow-sm hover:shadow-md transition">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-teal-700 transition">1) Router choice clarity</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-teal-50 text-teal-700 font-medium">+3.38% CR</span>
+          </div>
+          <p class="text-sm text-gray-700 mt-2">
+            Translated technical specs into human traits to reduce decision anxiety for low technical affinity users.
+          </p>
+          <p class="text-xs text-gray-500 mt-3">View experiment →</p>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#exp-next-steps" class="group border rounded-xl p-5 bg-white/80 shadow-sm hover:shadow-md transition">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-teal-700 transition">2) Process transparency</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-teal-50 text-teal-700 font-medium">+1.98% CR</span>
+          </div>
+          <p class="text-sm text-gray-700 mt-2">
+            Reduced uncertainty about what happens next to improve confidence and click-through.
+          </p>
+          <p class="text-xs text-gray-500 mt-3">View experiment →</p>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#exp-faq-cta" class="group border rounded-xl p-5 bg-white/80 shadow-sm hover:shadow-md transition">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-teal-700 transition">3) Help discoverability</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-yellow-50 text-yellow-700 font-medium">+23% engagement</span>
+          </div>
+          <p class="text-sm text-gray-700 mt-2">
+            Made help content easier to access for analytical users who need reassurance before committing.
+          </p>
+          <p class="text-xs text-gray-500 mt-3">View experiment →</p>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#exp-failed-tests" class="group border rounded-xl p-5 bg-white/80 shadow-sm hover:shadow-md transition">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-teal-700 transition">4) What didn’t work</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700 font-medium">Learnings</span>
+          </div>
+          <p class="text-sm text-gray-700 mt-2">
+            Documented failed tests to cut scope and double down on what actually moved the metric.
+          </p>
+          <p class="text-xs text-gray-500 mt-3">View learnings →</p>
+        </a>
+      </div>
     </div>
 
-    <!-- Clarifying Router Traits -->
-    <div class="mb-12" x-data="{ view: 'before' }">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Adding Router Traits</h2>
-      <p class="mb-4 text-base text-gray-700">
-        To support users with low technical affinity, we replaced complex router specs with intuitive traits: 
-        <strong>Number of people</strong>, <strong>Home size</strong>, and <strong>Internet usage</strong>. 
-        These were derived from user interviews and made manageable for our Data Management team via PIM integration.
-      </p>
-      <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-6 w-40 h-10">
-        <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
-             :class="view === 'after' ? 'translate-x-full' : 'translate-x-0'"></div>
-        <button class="relative w-1/2 z-10 text-sm font-medium transition"
-                :class="view === 'before' ? 'text-gray-900' : 'text-gray-500'"
-                @click="view = 'before'">Before</button>
-        <button class="relative w-1/2 z-10 text-sm font-medium transition"
-                :class="view === 'after' ? 'text-gray-900' : 'text-gray-500'"
-                @click="view = 'after'">After</button>
+    <!-- Experiment 1: Router Traits -->
+    <section id="exp-router-traits" class="mb-14 scroll-mt-24">
+      <div class="flex items-center justify-between gap-4 mb-3">
+        <h2 class="text-2xl font-semibold text-gray-800">1) Router choice clarity — Router Traits</h2>
+        <span class="text-sm px-3 py-1 rounded-full bg-teal-50 text-teal-700 font-semibold">+3.38% relative CR</span>
       </div>
-      <div class="mb-6" x-show="view === 'before'" x-transition>
-        <img src="Before.png" alt="Router UI Before" class="rounded-lg border border-gray-200 shadow w-full">
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="md:col-span-1 border rounded-xl p-4 bg-white">
+          <h3 class="text-sm font-semibold text-gray-900 mb-2">What we observed</h3>
+          <p class="text-sm text-gray-700">Users with low technical affinity struggled to interpret router specs and hesitated to proceed.</p>
+
+          <h3 class="text-sm font-semibold text-gray-900 mt-4 mb-2">What we changed</h3>
+          <p class="text-sm text-gray-700">Replaced complex specs with intuitive traits: <strong>people</strong>, <strong>home size</strong>, <strong>usage</strong> (scalable via PIM).</p>
+
+          <h3 class="text-sm font-semibold text-gray-900 mt-4 mb-2">Why it worked</h3>
+          <p class="text-sm text-gray-700">Reduced ambiguity at a key decision node, improving confidence and reducing context switching.</p>
+        </div>
+
+        <div class="md:col-span-2">
+          <!-- Before / After toggle (existing logic pattern) -->
+          <div class="mb-4" x-data="{ view: 'before' }">
+            <div class="relative inline-flex bg-gray-100 rounded-full p-1 mb-4 w-44 h-10">
+              <div class="absolute top-1 left-1 w-[calc(50%-0.25rem)] h-8 bg-white rounded-full shadow-md transition-all duration-300"
+                   :class="view === 'after' ? 'translate-x-full' : 'translate-x-0'"></div>
+              <button class="relative w-1/2 z-10 text-sm font-medium transition"
+                      :class="view === 'before' ? 'text-gray-900' : 'text-gray-500'"
+                      @click="view = 'before'">Before</button>
+              <button class="relative w-1/2 z-10 text-sm font-medium transition"
+                      :class="view === 'after' ? 'text-gray-900' : 'text-gray-500'"
+                      @click="view = 'after'">After</button>
+            </div>
+            <div class="mb-4" x-show="view === 'before'" x-transition>
+              <img src="Before.png" alt="Router UI Before" class="rounded-lg border border-gray-200 shadow w-full">
+            </div>
+            <div class="mb-4" x-show="view === 'after'" x-transition x-cloak>
+              <img src="After.png" alt="Router UI After" class="rounded-lg border border-gray-200 shadow w-full">
+            </div>
+          </div>
+
+          <div class="border rounded-xl p-4 bg-teal-50">
+            <p class="text-sm text-gray-800">
+              🧪 <strong>Result:</strong> +<strong>3.38%</strong> relative conversion uplift.
+              <span class="text-gray-700">Clear, simple language helped customers feel confident about their choice.</span>
+            </p>
+            <p class="text-sm text-gray-700 mt-2">🤝 Implemented with Data Management to keep traits scalable and maintainable across the catalog.</p>
+          </div>
+        </div>
       </div>
-      <div class="mb-6" x-show="view === 'after'" x-transition x-cloak>
-        <img src="After.png" alt="Router UI After" class="rounded-lg border border-gray-200 shadow w-full">
+    </section>
+
+    <!-- Experiment 2: Next Steps -->
+    <section id="exp-next-steps" class="mb-14 scroll-mt-24">
+      <div class="flex items-center justify-between gap-4 mb-3">
+        <h2 class="text-2xl font-semibold text-gray-800">2) Process transparency — Next Steps</h2>
+        <span class="text-sm px-3 py-1 rounded-full bg-teal-50 text-teal-700 font-semibold">+1.98% relative CR</span>
       </div>
-      <p class="mb-3 text-base text-gray-700">
-        🧪 <strong>Experiment Result:</strong> A/B testing showed a conversion uplift of <strong class="text-teal-700">+3.38%</strong>.
-        Clear, simple language helped customers feel confident about their choice.
-      </p>
-      <p class="text-base text-gray-700">
-        🤝 This was a collaborative effort with our Data Management team, ensuring the traits were scalable and maintainable across the catalog.
-      </p>
-    </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="md:col-span-1 border rounded-xl p-4 bg-white">
+          <h3 class="text-sm font-semibold text-gray-900 mb-2">What we observed</h3>
+          <p class="text-sm text-gray-700">Users were unsure what happens after selecting a tariff (cancellation, activation, timeline), increasing drop-off.</p>
+
+          <h3 class="text-sm font-semibold text-gray-900 mt-4 mb-2">What we changed</h3>
+          <p class="text-sm text-gray-700">Added a lightweight “Next steps” explanation near the primary action to reduce uncertainty and guide progression.</p>
+
+          <h3 class="text-sm font-semibold text-gray-900 mt-4 mb-2">Why it worked</h3>
+          <p class="text-sm text-gray-700">Clarified the path forward at the moment of commitment, reducing decision anxiety.</p>
+        </div>
+
+        <div class="md:col-span-2">
+          <!-- Replace these with your own assets when ready -->
+          <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <figure class="space-y-1">
+              <figcaption class="text-center text-xs text-gray-600">Before</figcaption>
+              <div class="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-8 text-center text-sm text-gray-500">Add screenshot</div>
+            </figure>
+            <figure class="space-y-1">
+              <figcaption class="text-center text-xs text-gray-600">After</figcaption>
+              <div class="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-8 text-center text-sm text-gray-500">Add screenshot</div>
+            </figure>
+          </div>
+
+          <div class="border rounded-xl p-4 bg-teal-50">
+            <p class="text-sm text-gray-800">🧪 <strong>Result:</strong> +<strong>1.98%</strong> relative conversion uplift.</p>
+            <p class="text-sm text-gray-700 mt-2">Learned that explaining the process beats adding more content elsewhere — timing matters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiment 3: FAQ CTA -->
+    <section id="exp-faq-cta" class="mb-14 scroll-mt-24">
+      <div class="flex items-center justify-between gap-4 mb-3">
+        <h2 class="text-2xl font-semibold text-gray-800">3) Help discoverability — FAQ CTA</h2>
+        <span class="text-sm px-3 py-1 rounded-full bg-yellow-50 text-yellow-700 font-semibold">+23% engagement</span>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="md:col-span-1 border rounded-xl p-4 bg-white">
+          <h3 class="text-sm font-semibold text-gray-900 mb-2">What we observed</h3>
+          <p class="text-sm text-gray-700">Analytical users actively searched for reassurance, but help content wasn’t discoverable at the point of doubt.</p>
+
+          <h3 class="text-sm font-semibold text-gray-900 mt-4 mb-2">What we changed</h3>
+          <p class="text-sm text-gray-700">Tested a clearer FAQ / help CTA placement and wording to increase access to reassurance content.</p>
+
+          <h3 class="text-sm font-semibold text-gray-900 mt-4 mb-2">Why it worked</h3>
+          <p class="text-sm text-gray-700">Reduced the effort to find answers, lowering friction for a key persona and improving confidence.</p>
+        </div>
+
+        <div class="md:col-span-2">
+          <!-- Replace these with your own assets when ready -->
+          <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <figure class="space-y-1">
+              <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
+              <div class="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-8 text-center text-sm text-gray-500">Add screenshot</div>
+            </figure>
+            <figure class="space-y-1">
+              <figcaption class="text-center text-xs text-gray-600">Variant</figcaption>
+              <div class="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-8 text-center text-sm text-gray-500">Add screenshot</div>
+            </figure>
+          </div>
+
+          <div class="border rounded-xl p-4 bg-yellow-50">
+            <p class="text-sm text-gray-800">🧪 <strong>Result:</strong> +<strong>23%</strong> engagement on help content.</p>
+            <p class="text-sm text-gray-700 mt-2">Improved findability of reassurance content for users who need validation before committing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What didn’t work (optional but senior-signal) -->
+    <section id="exp-failed-tests" class="mb-14 scroll-mt-24">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-3">4) What didn’t work (and what we learned)</h2>
+      <div class="border rounded-xl p-5 bg-white">
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>Example failed test:</strong> Replace this line with your actual failed experiment and what the data taught you.</li>
+          <li><strong>Scope reduction insight:</strong> Replace this line with how learnings helped you cut scope and focus on high-signal ideas.</li>
+        </ul>
+        <p class="text-sm text-gray-500 mt-3">Tip: showing one failure with clear learning is a strong senior/lead signal.</p>
+      </div>
+    </section>
+
 
     <div class="mb-3">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">Key Takeaways</h2>
       <p>
-        Not every feature has to be flashy. Small, insight-led improvements, especially when focused on trust and clarity, can drive real results.
-        Product work is often about removing friction, not adding bells and whistles.
+        Treating “The Info Gap” as a cohesive initiative helped us learn faster than isolated tweaks. Coordinated experiments across decision nodes (choice clarity, process transparency, reassurance) reduced ambiguity and improved conversion. The key lesson: on high-leverage steps, clarity beats complexity — and timing beats volume.
       </p>
     </div>
 
