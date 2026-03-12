@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Case Study - Check24 Price Scraper</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+  <site-header></site-header>
+
+  <section data-aos="fade-up" class="page-shell max-w-5xl">
+    <div class="max-w-2xl mx-auto mb-10 text-center">
+      <h1 class="text-[clamp(1.9rem,3.8vw,2.55rem)] font-semibold tracking-tight text-gray-900">Check24 Price Scraper</h1>
+      <p class="mt-2 text-base text-gray-600 leading-relaxed">An internal monitoring tool that reduced manual effort and improved competitive reaction speed.</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Opportunity</h2>
+      <p class="text-gray-700">Frequent competitor feature and price changes were hard to track. Monitoring consumed several hours each week across Key Account Management and Data Management, with no scalable internal solution in place.</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Approach</h2>
+      <p class="text-gray-700">I built a scraper that captures key funnel steps, compares screenshots over time, extracts product and price changes at address level, and sends alerts to Microsoft Teams via webhook automation.</p>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Outcomes</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>Saved <strong class="text-teal-700">8+ hours/week</strong> for Data and KAM teams</li>
+        <li>Enabled faster competitive price reactions</li>
+        <li>Generated <strong class="text-teal-700">+600 incremental monthly conversions</strong></li>
+      </ul>
+    </div>
+
+    <div class="glass-card p-6 mb-8" x-data="{ playing: false }">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">Demo</h3>
+      <div class="relative" x-show="!playing" x-transition>
+        <img src="images/check24_scraper.png" alt="Check24 Scraper - screenshot preview" class="w-full rounded-lg border border-gray-200 shadow" />
+        <button @click="playing = true" class="absolute inset-0 flex items-center justify-center" aria-label="Play demo video">
+          <span class="backdrop-blur-sm bg-black/40 text-white px-4 py-2 rounded-full flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7-11-7z"/>
+            </svg>
+            Watch video
+          </span>
+        </button>
+      </div>
+      <div x-show="playing" x-transition x-cloak>
+        <video controls autoplay class="w-full rounded-lg border border-gray-200 shadow" poster="images/check24_scraper.jpg">
+          <source src="videos/check24_scraper.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="glass-card p-6 mb-8">
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">Tools Used</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500">n8n</span>
+        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600">Python</span>
+        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-slate-600">Playwright</span>
+        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-600">Streamlit</span>
+      </div>
+    </div>
+
+    <a href="work.html" class="text-teal-600 font-medium hover:underline">&larr; Back to Selected Work</a>
+  </section>
+
+  <site-footer></site-footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="layout.js"></script>
+</body>
+</html>

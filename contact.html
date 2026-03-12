@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
-  <title>Contact – Raphael Ariello</title>
+  <title>Contact - Raphaël Ariello</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -12,25 +12,34 @@
 <body class="bg-white text-gray-800 min-h-screen flex flex-col">
   <site-header></site-header>
 
-  <!-- ✅ Contact Section -->
-  <main class="flex-grow">
-    <section data-aos="fade-up" class="max-w-xl mx-auto px-6 py-16 text-center">
-      <h1 class="text-4xl font-bold text-teal-700 mb-4">Let’s Connect</h1>
-      <p class="text-gray-600 mb-8">
-        Whether it's about product stuff or just chatting about coffee, my dog or good UX, I’d love to hear from you!
-      </p>
+  <!-- Contact Section -->
+  <main class="flex-grow flex">
+    <section data-aos="fade-up" class="relative overflow-hidden flex-1">
+      <div class="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-amber-50"></div>
+      <div class="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-teal-100/60 blur-3xl"></div>
+      <div class="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-orange-100/60 blur-3xl"></div>
 
-      <!-- Contact Chips -->
-      <div class="flex flex-wrap justify-center gap-4">
-        <!-- Email Chip -->
-        <a href="mailto:raphaelariello@gmail.com" class="inline-flex items-center gap-2 bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg hover:bg-teal-200 transition">
-          📧 Email me
-        </a>
+      <div class="relative max-w-6xl mx-auto px-6 py-14 md:py-20">
+        <div class="max-w-3xl">
+            <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-teal-700 bg-teal-100/80 px-3 py-1 rounded-full mb-5">
+              Let’s Connect
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+              Let’s work together on better products.
+            </h1>
+            <p class="text-lg text-gray-700 max-w-2xl mb-7">
+              Feel free to contact me if you want to work together, to share and discuss about product, if you need mentoring to grow as a Product Manager or just for a casual chat.
+            </p>
 
-        <!-- LinkedIn Chip -->
-        <a href="https://www.linkedin.com/in/rapha%C3%ABl-ariello-60626084/" target="_blank" class="inline-flex items-center gap-2 bg-gray-100 text-gray-800 text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-200 transition">
-          💼 LinkedIn
-        </a>
+            <div class="flex flex-wrap gap-3 mb-8">
+              <a href="mailto:raphaelariello@gmail.com?subject=Let's%20connect%20-%20Portfolio" class="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl shadow-md transition">
+                Email me
+              </a>
+              <a href="https://www.linkedin.com/in/rapha%C3%ABl-ariello-60626084/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold px-5 py-3 rounded-xl transition">
+                LinkedIn
+              </a>
+            </div>
+        </div>
       </div>
     </section>
   </main>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
-  <title>Case Study – Verivox: Offer Page Basket</title>
+  <title>Case Study - Verivox: Offer Page Basket</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/alpinejs" defer></script>
@@ -18,36 +18,81 @@
   <site-header></site-header>
 
   <!-- Case Study Content (same container/spacing as info-gap) -->
-  <section data-aos="fade-up" class="max-w-3xl mx-auto px-6 py-12"
+  <section data-aos="fade-up" class="page-shell max-w-5xl"
            x-data="offerBasket()">
-    <h1 class="text-4xl font-bold text-teal-700 mb-4">Verivox: Offer Page Basket</h1>
-    <p class="text-gray-500 italic mb-8">
-      Clarity and information hierarchy drive confidence. The basket that made the difference.
-    </p>
+    <div class="max-w-2xl mx-auto mb-10 text-center">
+      <h1 class="text-[clamp(1.9rem,3.8vw,2.55rem)] font-semibold tracking-tight text-gray-900">Verivox: Offer Page Basket</h1>
+      <p class="mt-2 text-base text-gray-600 leading-relaxed">Clarity and information hierarchy drive confidence. The basket that made the difference.</p>
+    </div>
 
-    <div class="mb-10">
+    <div id="opportunity" class="mb-10 scroll-mt-28">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Opportunity</h2>
-      <p>User feedback described the Offer Page as unstructured and sparse, with critical info missing. Customers arrived at the second step, the Options page, lacking clarity on all base information about the tariff, the monthly prices, and what comes next - creating decision anxiety.</p>
+      <p>User feedback described the Offer Page as unstructured and sparse, with critical info missing. Customers arrived at the second step, the Options page, lacking clarity on all base information about the tariff, the monthly prices and what comes next, creating decision anxiety.</p>
     </div>
 
-    <div class="mb-10">
+    <div id="hypothesis" class="mb-10 scroll-mt-28">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Hypothesis</h2>
-      <p>A persistent basket keeps key information and the primary action always visible, reducing context switching and guiding the next step. We assumed that by doing this, we could reduce the bounce rate and hence increase the conversion at this step of the funnel. </p><br/><p>As there was a difference in the performance between the mobile and desktop version, we assumed the CTA placement improvement could further improve the desktop experience.</p>
+      <p>If we keep key tariff information and the primary CTA persistently visible across the step, users experience less decision friction and progress to checkout at a higher rate.</p>
     </div>
 
-    <div class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-2">My Role</h2>
-      <p>As Product Manager for Broadband, I led discovery, prioritized scope, coordinated prototyping, user testing, engineering, and owned experiment design, analysis and iteration.</p>
+    <div class="mb-10 grid md:grid-cols-3 gap-6">
+      <div class="glass-card p-5">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Scope & Ownership</h2>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+          <li>Owned Offer + Options funnel optimization end-to-end</li>
+          <li>Drove discovery, prioritization, experiment design, and rollout decisions</li>
+          <li>Led cross-functional delivery with engineering, UX, research, QA, and BI</li>
+        </ul>
+      </div>
+      <div class="glass-card p-5">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Stakeholder Complexity</h2>
+        <p class="text-sm text-gray-700">We aligned Product, UX, BI, and commercial teams on a shared KPI framework while balancing speed-to-ship against measurement quality. The key challenge was prioritizing mobile and desktop changes without fragmenting the roadmap.</p>
+      </div>
+      <div class="glass-card p-5">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Decision Memo</h2>
+        <p class="text-sm text-gray-700">We prioritized a persistent basket over broader redesign alternatives because it directly targeted decision friction and could be tested quickly with clear guardrails. We deprioritized lower-confidence visual refinements until core conversion gains were validated.</p>
+      </div>
     </div>
 
-    <div class="mb-10">
+    <div class="mb-4">
+      <h2 class="text-2xl font-semibold text-gray-800">Strategic Framing</h2>
+    </div>
+
+    <div class="mb-10 grid md:grid-cols-2 gap-6">
+      <div class="glass-card p-5">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Market Context</h2>
+        <p class="text-sm text-gray-700">The broadband category has high consideration, strong price sensitivity, and low trust in hidden trade-offs. In this environment, reducing ambiguity at decision points is a direct growth lever, not only a UX improvement.</p>
+      </div>
+      <div class="glass-card p-5">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">KPI Tree</h2>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+          <li><strong>North-star:</strong> Conversion Rate (Sign-up)</li>
+          <li><strong>Leading:</strong> CTA visibility, basket interactions, click-through</li>
+          <li><strong>Guardrails:</strong> bounce rate, support contacts, mobile performance</li>
+        </ul>
+      </div>
+      <div class="glass-card p-5">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Trade-offs Managed</h2>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+          <li>Information density vs. cognitive load</li>
+          <li>Persistent guidance vs. visual noise</li>
+          <li>Desktop flexibility vs. mobile speed and clarity</li>
+        </ul>
+      </div>
+      <div class="glass-card p-5">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Iteration Loop</h2>
+        <p class="text-sm text-gray-700">We ran a tight cycle: identify friction in behavior and research data, ship scoped variants, validate via A/B testing, and fold learnings into the next iteration. This avoided one-shot redesign risk and compounded gains over multiple releases.</p>
+      </div>
+    </div>
+    
+    <div id="personas" class="mb-10 scroll-mt-28">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Who We Designed For</h2>
       <div class="grid sm:grid-cols-2 gap-6">
-        <div class="border rounded-xl p-4 bg-violet-50">
+        <div class="glass-card p-4">
           <h3 class="font-semibold text-lg text-violet-700 mb-2">🧑‍💻 Meticulous Max</h3>
           <p class="text-sm text-gray-700">Max is savvy, fast-switching, and well-informed, but he still double-checks. He doesn't want to overpay, but hates the risk of unreliable internet. He’s a hybrid of control and curiosity.</p>
         </div>
-        <div class="border rounded-xl p-4 bg-yellow-50">
+        <div class="glass-card p-4">
           <h3 class="font-semibold text-lg text-yellow-700 mb-2">🧐 Clockwork Christian</h3>
           <p class="text-sm text-gray-700">Christian is structured, straightforward, and efficiency-driven. He’s not looking for flash, just clarity, speed, and simplicity. If a product respects his time, he’ll respect it back.</p>
         </div>
@@ -57,13 +102,16 @@
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">Experiments & Outcomes</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>Initial Basket implementation on Mobile and Desktop:</strong> +7,01% relative conversion rate</li>
-        <li><strong>Iteration Desktop Basket (CTA visibility):</strong> further +3,02% relative conversion rate uplift by preventing below-the-fold on small screens.</li>
+        <li><strong>Experiment 1 (Offer and Options Page - Mobile and Desktop):</strong> Baseline <strong class="text-teal-700">10,96% CR</strong>, improvement <strong class="text-teal-700">+7,03%</strong>, statistical significance <strong class="text-teal-700">&gt;99%</strong>.</li>
+        <li><strong>Experiment 2 (Desktop Iteration):</strong> Baseline <strong class="text-teal-700">14,95% CR</strong>, improvement <strong class="text-teal-700">+3,02%</strong>, statistical significance <strong class="text-teal-700">90%</strong>.</li>
+        <li><strong>Total business impact:</strong> <strong class="text-teal-700">€2.2M net revenue (FY)</strong>.</li>
       </ul>
     </div>
 
+    <div class="glass-card p-6 mb-10">
+    <h3 class="text-xl font-semibold text-gray-900 mb-5">Experiment 1: Initial Basket (Mobile + Desktop)</h3>
     <!-- Offer Page (faithful Alpine-style switches, like the Before/After in info-gap) -->
-    <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
+    <div id="offer-page" class="mb-8 scroll-mt-28" x-data="{ device: 'desktop', variant: 'control' }">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Offer Page</h2>
 
       <!-- Toggles Row (always one line; scales below 400px) -->
@@ -120,14 +168,14 @@
 
             <!-- Mobile: show ALL three states side-by-side (Control, Basket, Expanded) -->
             <template x-if="device==='mobile'">
-              <div class="grid grid-cols-2 gap-4 items-start">
-                <figure class="space-y-1">
+              <div class="grid grid-cols-2 gap-4 items-start max-w-[37.5rem] mx-auto">
+                <figure class="space-y-1 max-w-[17.5rem] mx-auto">
                   <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
                   <img src="images/OP_Mobile_Control.png"
                       alt="Offer Page Control Mobile"
                       class="rounded-lg border border-gray-200 shadow w-full" />
                 </figure>
-                <figure class="space-y-1">
+                <figure class="space-y-1 max-w-[17.5rem] mx-auto">
                   <figcaption class="text-center text-xs text-gray-600">Basket (Expanded)</figcaption>
                   <img src="images/OP_Mobile_Basket_expanded.png"
                       alt="Offer Page Basket Mobile Expanded"
@@ -138,7 +186,7 @@
           </div>
     
     <!-- Options Page (same controls) -->
-    <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
+    <div id="options-page" class="mb-8 scroll-mt-28" x-data="{ device: 'desktop', variant: 'control' }">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Options Page</h2>
 
       <!-- Toggles Row -->
@@ -191,14 +239,14 @@
 
       <!-- Mobile: show BOTH states side-by-side -->
       <template x-if="device==='mobile'">
-        <div class="grid grid-cols-2 gap-4 items-start">
-          <figure class="space-y-1">
+        <div class="grid grid-cols-2 gap-4 items-start max-w-[37.5rem] mx-auto">
+          <figure class="space-y-1 max-w-[17.5rem] mx-auto">
             <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
             <img src="images/Options_Mobile_Control.png"
                 alt="Options Page Control Mobile"
                 class="rounded-lg border border-gray-200 shadow w-full" />
           </figure>
-          <figure class="space-y-1">
+          <figure class="space-y-1 max-w-[17.5rem] mx-auto">
             <figcaption class="text-center text-xs text-gray-600">Basket (Collapsed)</figcaption>
             <img src="images/Options_Mobile_Basket_collapsed.png"
                 alt="Options Page Basket Mobile"
@@ -209,15 +257,14 @@
     </div>
 
     <p class="mb-3 text-base text-gray-700">
-        🧪 <strong>Experiment Result:</strong> A/B testing showed a conversion uplift of <strong class="text-teal-700">+8,43%</strong> on Mobile and <strong class="text-teal-700">+4,91%</strong> on Desktop.
-    
+        🧪 <strong>Experiment 1 Result:</strong> Baseline <strong class="text-teal-700">10,96% CR</strong>, uplift <strong class="text-teal-700">+7,03%</strong>, significance <strong class="text-teal-700">&gt;99%</strong>.
       </p>
-      <p class="mb-10 text-base text-gray-700">
-        🤝 This was a collaborative effort with our User Research team, ensuring the new experience would meet the needs of the users.
-      </p>
+    </div>
 
+  <div class="glass-card p-6 mb-10">
+    <h3 class="text-xl font-semibold text-gray-900 mb-5">Experiment 2: Desktop Iteration</h3>
   <!-- Desktop Iteration -->
-    <div class="mb-12" x-data="{ device: 'desktop', variant: 'control' }">
+    <div id="iteration-desktop" class="mb-6 scroll-mt-28" x-data="{ device: 'desktop', variant: 'control' }">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Iteration Basket Desktop</h2>
 
       <!-- Toggle: Basket Variant -->
@@ -249,12 +296,9 @@
     </div>
 
     <p class="mb-3 text-base text-gray-700">
-        🧪 <strong>Experiment Result:</strong> The A/B test showed a further conversion uplift of <strong class="text-teal-700">+3,02%</strong>.
-    
+        🧪 <strong>Experiment 2 Result (Desktop Iteration):</strong> Baseline <strong class="text-teal-700">14,95% CR</strong>, uplift <strong class="text-teal-700">+3,02%</strong>, significance <strong class="text-teal-700">90%</strong>.
       </p>
-      <p class="mb-3 text-base text-gray-700">
-        🤝 This was a very quick iteration that allowed us to quickly validate an hypothesis and outperform the initial planned impact of 4% for the entire initiative.
-      </p>
+  </div>
 
     <a href="work.html" class="text-teal-600 font-medium hover:underline">&larr; Back to Selected Work</a>
   </section>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
-  <title>Case Study – Verivox: Filling the Info Gap</title>
+  <title>Case Study - Verivox: Filling the Info Gap</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/alpinejs" defer></script>
@@ -16,9 +16,11 @@
   <site-header></site-header>
 
   <!-- Case Study Content -->
-  <section data-aos="fade-up" class="max-w-3xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-teal-700 mb-4">Verivox: Filling the Info Gap</h1>
-    <p class="text-gray-500 italic mb-8">Small improvements, big trust. Incremental UX changes that solved a real customer pain point.</p>
+  <section data-aos="fade-up" class="page-shell max-w-5xl">
+    <div class="max-w-2xl mx-auto mb-10 text-center">
+      <h1 class="text-[clamp(1.9rem,3.8vw,2.55rem)] font-semibold tracking-tight text-gray-900">Verivox: Filling the Info Gap</h1>
+      <p class="mt-2 text-base text-gray-600 leading-relaxed">Small improvements, big trust. Incremental UX changes that solved a real customer pain point.</p>
+    </div>
 
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Opportunity</h2>
@@ -27,7 +29,7 @@
 
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">The Hypothesis</h2>
-      <p>To be completed</p>
+      <p>If we reduce information ambiguity at key moments in the funnel, we can increase confidence and improve conversion through clearer, better-timed guidance.</p>
     </div>
 
     <div class="mb-10">
@@ -38,11 +40,11 @@
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Who We Designed For</h2>
       <div class="grid sm:grid-cols-2 gap-6">
-        <div class="border rounded-xl p-4 bg-teal-50">
+        <div class="glass-card p-4">
           <h3 class="font-semibold text-lg text-teal-700 mb-2">👩‍⚖️ Analytical Anja</h3>
           <p class="text-sm text-gray-700">Anja dives deep, compares meticulously, and doesn’t mind spending extra for something that feels right. She's skeptical of biased advice and wants confidence before making a move.</p>
         </div>
-        <div class="border rounded-xl p-4 bg-yellow-50">
+        <div class="glass-card p-4">
           <h3 class="font-semibold text-lg text-yellow-700 mb-2">🧐 Clockwork Christian</h3>
           <p class="text-sm text-gray-700">Christian is structured, straightforward, and efficiency-driven. He’s not looking for flash — just clarity, speed, and simplicity. If a product respects his time, he’ll respect it back.</p>
         </div>
@@ -52,8 +54,8 @@
     <div class="mb-10">
       <h2 class="text-2xl font-semibold text-gray-800 mb-2">Experiments & Outcomes</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>Adding Router Traits:</strong> +3,38% relative conversion rate increase</li>
-        <li><strong>Next Steps in Offer Page</strong> +1,98% relative conversion rate increase</li>
+        <li><strong>Adding Router Traits:</strong> +3.38% relative conversion increase</li>
+        <li><strong>Next Steps in Offer Page:</strong> +1.98% relative conversion increase</li>
         <li><strong>FAQ CTA test:</strong> +23% engagement on help content</li>
         <li>Some tests failed — It helped us cut scope and focus on real pain points</li>
       </ul>
@@ -78,10 +80,10 @@
                 @click="view = 'after'">After</button>
       </div>
       <div class="mb-6" x-show="view === 'before'" x-transition>
-        <img src="Before.png" alt="Router UI Before" class="rounded-lg border border-gray-200 shadow w-full">
+        <img src="images/Before.png" alt="Router UI Before" class="rounded-lg border border-gray-200 shadow w-full">
       </div>
       <div class="mb-6" x-show="view === 'after'" x-transition x-cloak>
-        <img src="After.png" alt="Router UI After" class="rounded-lg border border-gray-200 shadow w-full">
+        <img src="images/After.png" alt="Router UI After" class="rounded-lg border border-gray-200 shadow w-full">
       </div>
       <p class="mb-3 text-base text-gray-700">
         🧪 <strong>Experiment Result:</strong> A/B testing showed a conversion uplift of <strong class="text-teal-700">+3.38%</strong>.

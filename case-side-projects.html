@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
-  <title>Side Projects and Vibecoding</title>
+  <title>Case Study - Side Projects and Vibe Coding</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/alpinejs" defer></script>
@@ -15,201 +15,22 @@
   <site-header></site-header>
 
   <!-- Case Study Content -->
-  <section data-aos="fade-up" class="max-w-4xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-teal-700 mb-4">Side Projects and Vibecoding ✨</h1>
-    <p class="text-gray-500 italic mb-8">Exploring new tools, solving real pain points, without any technical dependency.</p>
+  <section data-aos="fade-up" class="page-shell">
+    <div class="max-w-2xl mx-auto mb-10 text-center">
+      <h1 class="text-[clamp(1.9rem,3.8vw,2.55rem)] font-semibold tracking-tight text-gray-900">Side Projects and Vibe Coding ✨</h1>
+      <p class="mt-2 text-base text-gray-600 leading-relaxed">Exploring new tools and solving real pain points without heavy technical dependency.</p>
+    </div>
 
     <!-- Why I build side tools -->
-    <div class="mb-10 border rounded-xl p-6 bg-teal-50/50">
+    <div class="mb-10 glass-card p-6">
       <h2 class="text-xl font-semibold text-gray-900 mb-2">Why I build side tools</h2>
       <p class="text-gray-700">
-        When operational friction blocks growth, I prototype small tools that remove dependency, accelerate learning, and create measurable impact. These are not only hobby projects, they’re leverage multipliers or remove actual pain points.
+        When operational friction blocks growth, I prototype small tools that remove dependencies, accelerate learning, and create measurable impact. These are not only hobby projects; they are leverage multipliers that solve real pain points.
       </p>
     </div>
-
-  <!-- Project 2: Check24 Scraper -->
-  <article class="border rounded-xl p-6 bg-white/80 backdrop-blur-sm shadow-sm mb-8 hover:shadow-lg transition">
-    <header class="mb-6">
-      <h2 class="text-2xl font-semibold text-gray-900">Check24 Price Scraper</h2>
-    </header>
-
-    <!-- a. Pain Point -->
-    <div class="mb-6">
-      <h3 class="text-lg font-semibold text-gray-800 mb-2">Pain Point</h3>
-      <p class="text-gray-700 mb-10">
-        It was hard to keep track of frequent feature changes at our competitor and their numerous, dynamic price updates. This monitoring process consumed several hours every week across Key Account and Data Management. Verivox explored working with Preispiranha, a price monitoring and dynamic pricing tool, but negotiations stopped after Verivox got acquired, leaving the gap unfilled.
-      </p>
-    </div>
-
-    <!-- b. Solution -->
-    <div class="mb-6">
-      <h3 class="text-lg font-semibold text-gray-800 mb-2">Solution</h3>
-      <p class="text-gray-700 mb-10">
-        I built a website scraper that captures each critical step of the user journey, takes screenshots, and compares them over time. After validating the approach, I extended it to list all products and prices at a given address and compare them with the previous run. 
-        <br/><br/>With n8n, I created an automation that flags price changes and posts an alert to Microsoft Teams via webhook, helping us stay competitive. After a successful PoC, I shipped a simple UI using Streamlit so colleagues could trigger the script on demand. 
-        </span>.
-      </p>
-    </div>
-
-    <!-- c. Impact -->
-    <div class="mb-6">
-      <h3 class="text-lg font-semibold text-gray-800 mb-2">Impact</h3>
-      <ul class="list-disc list-inside text-gray-700 space-y-2">
-        <li>Saved more than 8 hours/week for the Data and KAM teams</li>
-        <li>Enabled faster competitive price reactions</li>
-        <li>Generated <span class="font-semibold">+600 incremental monthly conversions</li>
-        </ul>
-    </div>
-   
-    <!-- c) Demo -->
-    <div class="mb-6" x-data="{ playing: false }">
-      <h3 class="text-lg font-semibold text-gray-800 mb-2">Demo</h3>
-
-      <!-- Preview state (image with play overlay) -->
-      <div class="relative" x-show="!playing" x-transition>
-        <img
-          src="images/check24_scraper.png"
-          alt="Check24 Scraper - screenshot preview"
-          class="w-full rounded-lg border border-gray-200 shadow"
-        />
-        <!-- Play overlay -->
-        <button
-          @click="playing = true"
-          class="absolute inset-0 flex items-center justify-center"
-          aria-label="Play demo video"
-        >
-          <span class="backdrop-blur-sm bg-black/40 text-white px-4 py-2 rounded-full flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M8 5v14l11-7-11-7z"/>
-            </svg>
-            Watch video
-          </span>
-        </button>
-      </div>
-
-      <!-- Video state -->
-      <div x-show="playing" x-transition x-cloak>
-        <video
-          controls
-          autoplay
-          class="w-full rounded-lg border border-gray-200 shadow"
-          poster="images/check24_scraper.jpg"
-        >
-          <source src="videos/check24_scraper.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <p class="mt-2 text-sm text-gray-500">
-        Click the preview to watch the demo video.
-      </p>
-    </div>
-
-    <!-- d. Tools used -->
-    <div>
-      <h3 class="text-lg font-semibold text-gray-800 mb-3">Tools used</h3>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500">n8n</span>
-        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600">Python</span>
-        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-slate-600">Playwright</span>
-        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-600">Streamlit</span>
-        <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-slate-600">Codex</span>
-      </div>
-    </div>
-  </article>
-
-  <!-- Project 2: Experiment Memory Agent -->
-  <article class="border rounded-xl p-6 bg-white/80 backdrop-blur-sm shadow-sm mb-8 hover:shadow-lg transition">
-      <header class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-900">Experiment Memory Agent</h2>
-        </header>
-
-        <!-- a. Pain Point -->
-        <div class="mb-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">Pain Point</h3>
-            <p class="text-gray-700 mb-10">
-                Over time, we accumulated dozens of A/B tests. Insights were buried in tickets, comments, screenshots, and PDFs. It was difficult to reuse learnings, detect patterns, or quickly answer questions like: <span class="font-semibold">"Have we tested this before?"</span>
-            </p>
-        </div>
-
-        <!-- b. Solution -->
-        <div class="mb-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">Solution</h3>
-            <p class="text-gray-700 mb-10">
-                I built an AI-powered assistant that connects to our historical experiment data and allows us to query past tests in natural language. The agent retrieves structured experiment metadata, analyzes outcomes, and suggests patterns or potential next steps.
-                <br/><br/>
-                This reduced repetitive analysis work, accelerated hypothesis validation, and enabled faster decision-making when defining new experiments.
-            </p>
-        </div>
-
-        <!-- c) Impact -->
-        <div class="mb-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">Impact</h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Reduced time spent searching historical experiments</li>
-                <li>Improved knowledge reuse across our tribe and other horizontal teams</li>
-                <li>Increased experimentation velocity by shortening hypothesis validation cycles</li>
-                <li>Demonstrated practical AI integration within product workflows</li>
-            </ul>
-        </div>
-
-        <!-- d) Demo -->
-        <div class="mb-6" x-data="{ playing: false }">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">Demo</h3>
-
-            <!-- Preview state (image with play overlay) -->
-            <div class="relative" x-show="!playing" x-transition>
-                <img
-                  src="images/ema_thumbnail.png"
-                  alt="Experiment Memory Agent - screenshot preview"
-                  class="w-full rounded-lg border border-gray-200 shadow"
-                />
-                <!-- Play overlay -->
-                <button
-                  @click="playing = true"
-                  class="absolute inset-0 flex items-center justify-center"
-                  aria-label="Play demo video"
-                >
-                  <span class="backdrop-blur-sm bg-black/40 text-white px-4 py-2 rounded-full flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M8 5v14l11-7-11-7z"/>
-                    </svg>
-                    Watch video
-                  </span>
-                </button>
-            </div>
-
-            <!-- Video state -->
-            <div x-show="playing" x-transition x-cloak>
-                <video
-                  controls
-                  autoplay
-                  class="w-full rounded-lg border border-gray-200 shadow"
-                  poster="images/ema_thumbnail.png"
-                >
-                  <source src="videos/ema_demo.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <p class="mt-2 text-sm text-gray-500">
-                Click the preview to watch the demo video.
-            </p>
-        </div>
-
-        <!-- e. Tools used -->
-        <div>
-            <h3 class="text-lg font-semibold text-gray-800 mb-3">Tools used</h3>
-            <div class="flex flex-wrap gap-2">
-                <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-slate-600">Claude (Bedrock)</span>
-                <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600">Python</span>
-                <span class="text-white text-sm px-3 py-1 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400">API Integration</span>
-            </div>
-        </div>
-    </article>
 
     <!-- Project 3: Glass Availability Converter -->
-    <article class="border rounded-xl p-6 bg-white/80 backdrop-blur-sm shadow-sm mb-8 hover:shadow-lg transition">
+    <article class="glass-card p-6 mb-8 hover:shadow-lg transition">
     <header class="mb-6">
       <h2 class="text-2xl font-semibold text-gray-900">Glass Availability Converter</h2>
     </header>

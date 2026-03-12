@@ -4,28 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
-  <title>Raphael Ariello - Product Manager</title>
+  <title>Raphaël Ariello - Product Manager</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .first-fold {
+      min-height: calc(100svh - 4rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .first-fold-hero {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(1.25rem, 3.5vh, 2.5rem) 1.25rem;
+    }
+    .hero-copy {
+      max-width: 44rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .first-fold-logos {
+      flex: 0 0 auto;
+      width: 100%;
+      padding: 0.5rem 1.25rem 1rem;
+    }
+    .first-fold-logos-inner {
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      .first-fold {
+        min-height: calc(100svh - 4rem);
+      }
+      .first-fold-hero {
+        padding: 1rem 1rem 0.75rem;
+        align-items: flex-start;
+      }
+      .first-fold-logos {
+        padding: 0.25rem 1rem 0.75rem;
+      }
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
   <site-header></site-header>
 
+  <main>
+  <div class="first-fold">
   <!-- Hero Section -->
-  <section data-aos="fade-up" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 to-white px-6">
-    <div class="text-center max-w-2xl">
-      <h1 class="font-bold text-teal-700 mb-8 text-[clamp(1.75rem,6vw,3.75rem)]">Hey, I'm Raph 👋</h1>
-      <p class="text-lg md:text-xl text-gray-700 mb-10">
-        Product Manager crafting better digital experiences with empathy, data, and a passion for experimentation. I leverage AI tools, enjoy vibecoding and I have a <span id="streak"><script>
+  <section data-aos="fade-up" class="first-fold-hero">
+    <div class="hero-copy">
+      <h1 class="font-bold text-teal-700 mb-3 text-[clamp(2rem,6vw,3.75rem)]">Hey, I'm Raph 👋</h1>
+      <p class="text-lg md:text-xl font-semibold text-gray-900 mb-4">
+        I build products that make complex decisions feel simple.
+      </p>
+      <p class="text-base md:text-lg text-gray-700 mb-10">
+        I’m a Product Manager who turns messy customer problems into intuitive digital experiences. I use product discovery, analytics, and experimentation to continuously optimize my customers' experience. I have a <span id="streak"><script>
 document.write((2482+Math.max(0,Math.floor((Date.UTC(new Date().getFullYear(),new Date().getMonth(),new Date().getDate())-Date.UTC(2025,8,3))/86400000))).toLocaleString('en-US'))
 </script></span>&#8209;day Duolingo streak 🦉.
       </p>
-      <div class="space-x-4 mt-">
-        <a href="about.html" class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg shadow-md transition">
-          Learn More
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="work.html" class="cta-primary">
+          Explore Selected Work
         </a>
-        <a href="resume.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-6 rounded-lg transition">
+        <a href="resume.html" class="inline-flex items-center justify-center bg-white hover:bg-gray-50 border border-gray-200 text-gray-800 font-semibold py-2.5 px-5 rounded-xl transition">
           View Resume
         </a>
       </div>
@@ -33,9 +79,9 @@ document.write((2482+Math.max(0,Math.floor((Date.UTC(new Date().getFullYear(),ne
   </section>
 
  <!-- Company Logo Slider with Clean Arrows and Infinite Loop -->
-<section data-aos="fade-up"class="bg-white py-12">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-2xl font-bold text-center text-teal-700 mb-8">Companies I've Worked With</h2>
+<section data-aos="fade-up" class="first-fold-logos">
+  <div class="first-fold-logos-inner">
+    <h2 class="text-xl md:text-2xl font-bold text-center text-teal-700 mb-4 md:mb-6">Companies I've Worked With</h2>
 
     <!-- Mobile: scrollable + arrows -->
     <div class="relative sm:hidden">
@@ -43,22 +89,22 @@ document.write((2482+Math.max(0,Math.floor((Date.UTC(new Date().getFullYear(),ne
 
         <!-- Actual logos -->
         <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
-          <img src="logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
+          <img src="logos/logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
         </div>
         <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
-          <img src="logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
+          <img src="logos/logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
         </div>
         <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
-          <img src="logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
+          <img src="logos/logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
         </div>
         <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
-          <img src="logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
+          <img src="logos/logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
         </div>
         <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
-          <img src="logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
+          <img src="logos/logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
         </div>
         <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
-          <img src="logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
+          <img src="logos/logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
         </div>
 
       </div>
@@ -73,28 +119,29 @@ document.write((2482+Math.max(0,Math.floor((Date.UTC(new Date().getFullYear(),ne
     </div>
 
     <!-- Desktop Grid -->
-    <div class="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center mt-10">
+    <div class="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center mt-6">
       <div class="h-16 w-32 flex items-center justify-center">
-        <img src="logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
+        <img src="logos/logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
       </div>
       <div class="h-16 w-32 flex items-center justify-center">
-        <img src="logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
+        <img src="logos/logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
       </div>
       <div class="h-16 w-32 flex items-center justify-center">
-        <img src="logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
+        <img src="logos/logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
       </div>
       <div class="h-16 w-32 flex items-center justify-center">
-        <img src="logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
+        <img src="logos/logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
       </div>
       <div class="h-16 w-32 flex items-center justify-center">
-        <img src="logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
+        <img src="logos/logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
       </div>
       <div class="h-16 w-32 flex items-center justify-center">
-        <img src="logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
+        <img src="logos/logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
       </div>
     </div>
   </div>
-
+</section>
+</div>
   <style>
     .no-scrollbar::-webkit-scrollbar {
       display: none;
@@ -114,7 +161,7 @@ document.write((2482+Math.max(0,Math.floor((Date.UTC(new Date().getFullYear(),ne
       scrollContainer.scrollBy({ left: 150, behavior: 'smooth' });
     });
   </script>
-</section>
+  </main>
 
   <!-- Footer -->
   <site-footer></site-footer>
