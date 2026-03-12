@@ -244,10 +244,13 @@ class SiteHeader extends HTMLElement {
     });
   }
 }
-customElements.define('site-header', SiteHeader);
+if (!customElements.get('site-header')) {
+  customElements.define('site-header', SiteHeader);
+}
 
 class SiteFooter extends HTMLElement {
   connectedCallback() {
+    injectGlobalTheme();
     const year = new Date().getFullYear();
     this.innerHTML = `
       <footer class="bg-white shadow-inner py-6 text-center text-sm text-gray-500">
@@ -255,4 +258,9 @@ class SiteFooter extends HTMLElement {
       </footer>`;
   }
 }
-customElements.define('site-footer', SiteFooter);
+if (!customElements.get('site-footer')) {
+  customElements.define('site-footer', SiteFooter);
+}
+
+// Ensure theme styles are injected even if custom elements fail to initialize.
+injectGlobalTheme();
