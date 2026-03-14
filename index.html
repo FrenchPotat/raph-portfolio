@@ -9,14 +9,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    .first-fold {
-      min-height: calc(100svh - 4rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
     .first-fold-hero {
-      flex: 1 1 auto;
+      min-height: calc(100svh - 4rem);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -30,28 +24,13 @@
       flex-direction: column;
       justify-content: center;
     }
-    .first-fold-logos {
-      flex: 0 0 auto;
-      width: 100%;
-      padding: 0.5rem 1.25rem 1rem;
-    }
-    .first-fold-logos-inner {
-      max-width: 72rem;
-      margin: 0 auto;
-    }
     @media (max-width: 768px) {
-      .first-fold {
-        min-height: calc(100svh - 4rem);
-      }
       .first-fold-hero {
         padding: 1.25rem 1rem 0.75rem;
         align-items: center;
       }
       .hero-copy {
         max-width: 25rem;
-      }
-      .first-fold-logos {
-        padding: 0.25rem 1rem 0.75rem;
       }
     }
   </style>
@@ -60,7 +39,6 @@
   <site-header></site-header>
 
   <main>
-  <div class="first-fold">
   <!-- Hero Section -->
   <section data-aos="fade-up" class="first-fold-hero">
     <div class="hero-copy">
@@ -85,31 +63,30 @@ document.write((2477+Math.max(0,Math.floor((Date.UTC(new Date().getFullYear(),ne
   </section>
 
  <!-- Company Logo Slider with Clean Arrows and Infinite Loop -->
-<section data-aos="fade-up" class="first-fold-logos">
-  <div class="first-fold-logos-inner">
-    <h2 class="text-xl md:text-2xl font-bold text-center text-teal-700 mb-4 md:mb-6">Companies I've Worked With</h2>
+<section data-aos="fade-up" class="page-shell pt-6 md:pt-8">
+    <h2 class="text-lg md:text-2xl font-bold text-center text-teal-700 mb-3 md:mb-6">Companies I've Worked With</h2>
 
     <!-- Mobile: scrollable + arrows -->
     <div class="relative sm:hidden">
       <div id="logo-scroll" class="flex space-x-6 overflow-x-auto scroll-smooth px-2 no-scrollbar">
 
         <!-- Actual logos -->
-        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+        <div class="h-14 w-28 flex-shrink-0 flex items-center justify-center">
           <img src="logos/logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
         </div>
-        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+        <div class="h-14 w-28 flex-shrink-0 flex items-center justify-center">
           <img src="logos/logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
         </div>
-        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+        <div class="h-14 w-28 flex-shrink-0 flex items-center justify-center">
           <img src="logos/logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
         </div>
-        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+        <div class="h-14 w-28 flex-shrink-0 flex items-center justify-center">
           <img src="logos/logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
         </div>
-        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+        <div class="h-14 w-28 flex-shrink-0 flex items-center justify-center">
           <img src="logos/logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
         </div>
-        <div class="h-16 w-32 flex-shrink-0 flex items-center justify-center">
+        <div class="h-14 w-28 flex-shrink-0 flex items-center justify-center">
           <img src="logos/logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
         </div>
 
@@ -125,29 +102,27 @@ document.write((2477+Math.max(0,Math.floor((Date.UTC(new Date().getFullYear(),ne
     </div>
 
     <!-- Desktop Grid -->
-    <div class="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center mt-6">
-      <div class="h-16 w-32 flex items-center justify-center">
+    <div class="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 items-center justify-items-center mt-5">
+      <div class="h-14 w-28 flex items-center justify-center">
         <img src="logos/logo-verivox.svg" alt="Verivox" class="max-h-full max-w-full object-contain" />
       </div>
-      <div class="h-16 w-32 flex items-center justify-center">
+      <div class="h-14 w-28 flex items-center justify-center">
         <img src="logos/logo-mya.svg" alt="MYA" class="max-h-full max-w-full object-contain" />
       </div>
-      <div class="h-16 w-32 flex items-center justify-center">
+      <div class="h-14 w-28 flex items-center justify-center">
         <img src="logos/logo-kadewe.png" alt="KaDeWe" class="max-h-full max-w-full object-contain" />
       </div>
-      <div class="h-16 w-32 flex items-center justify-center">
+      <div class="h-14 w-28 flex items-center justify-center">
         <img src="logos/logo-christ.svg" alt="CHRIST" class="max-h-full max-w-full object-contain" />
       </div>
-      <div class="h-16 w-32 flex items-center justify-center">
+      <div class="h-14 w-28 flex items-center justify-center">
         <img src="logos/logo-valmano.svg" alt="Valmano" class="max-h-full max-w-full object-contain" />
       </div>
-      <div class="h-16 w-32 flex items-center justify-center">
+      <div class="h-14 w-28 flex items-center justify-center">
         <img src="logos/logo-zalando.png" alt="Zalando" class="max-h-full max-w-full object-contain" />
       </div>
     </div>
-  </div>
 </section>
-</div>
   <style>
     .no-scrollbar::-webkit-scrollbar {
       display: none;
