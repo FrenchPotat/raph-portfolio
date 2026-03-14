@@ -238,7 +238,7 @@ function injectGlobalTheme() {
       display: inline-flex;
       align-items: center;
       border: 1px solid var(--support-border);
-      background: var(--support-bg);
+      background: var(--support-bg-hover);
       color: var(--support-text);
       border-radius: 9999px;
       padding: 0.26rem 0.72rem;
@@ -246,10 +246,6 @@ function injectGlobalTheme() {
       font-weight: 600;
       letter-spacing: 0.01em;
       line-height: 1;
-    }
-
-    .ui-chip:hover {
-      background: var(--support-bg-hover);
     }
 
     .case-toc {
