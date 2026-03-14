@@ -115,11 +115,11 @@
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Offer Page</h2>
 
       <!-- Toggles Row (always one line; scales below 400px) -->
-      <div class="flex items-center gap-3 mb-6 flex-nowrap max-[400px]:gap-1">
+      <div class="flex items-center gap-3 mb-6 flex-wrap sm:flex-nowrap max-[400px]:gap-1">
         <!-- Device -->
         <div
-          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
-                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0 max-w-full
+                max-[400px]:basis-full max-[400px]:w-full max-[400px]:min-w-0 max-[400px]:shrink
                 max-[400px]:h-8 max-[400px]:p-0.5">
           <!-- thumb -->
           <div
@@ -137,8 +137,8 @@
 
         <!-- Variant -->
         <div
-          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
-                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0 max-w-full
+                max-[400px]:basis-full max-[400px]:w-full max-[400px]:min-w-0 max-[400px]:shrink
                 max-[400px]:h-8 max-[400px]:p-0.5"
           :class="device === 'mobile' ? 'opacity-40 pointer-events-none' : ''">
           <!-- thumb -->
@@ -168,14 +168,14 @@
 
             <!-- Mobile: show ALL three states side-by-side (Control, Basket, Expanded) -->
             <template x-if="device==='mobile'">
-              <div class="grid grid-cols-2 gap-4 items-start max-w-[37.5rem] mx-auto">
-                <figure class="space-y-1 max-w-[17.5rem] mx-auto">
+              <div class="grid grid-cols-2 gap-3 items-start max-w-[21rem] sm:max-w-[37.5rem] mx-auto">
+                <figure class="space-y-1 max-w-[9.75rem] sm:max-w-[17.5rem] mx-auto">
                   <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
                   <img src="images/OP_Mobile_Control.png"
                       alt="Offer Page Control Mobile"
                       class="rounded-lg border border-gray-200 shadow w-full" />
                 </figure>
-                <figure class="space-y-1 max-w-[17.5rem] mx-auto">
+                <figure class="space-y-1 max-w-[9.75rem] sm:max-w-[17.5rem] mx-auto">
                   <figcaption class="text-center text-xs text-gray-600">Basket (Expanded)</figcaption>
                   <img src="images/OP_Mobile_Basket_expanded.png"
                       alt="Offer Page Basket Mobile Expanded"
@@ -190,11 +190,11 @@
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Options Page</h2>
 
       <!-- Toggles Row -->
-      <div class="flex items-center gap-3 mb-6 flex-nowrap max-[400px]:gap-1">
+      <div class="flex items-center gap-3 mb-6 flex-wrap sm:flex-nowrap max-[400px]:gap-1">
         <!-- Toggle: Device -->
         <div
-          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
-                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0 max-w-full
+                max-[400px]:basis-full max-[400px]:w-full max-[400px]:min-w-0 max-[400px]:shrink
                 max-[400px]:h-8 max-[400px]:p-0.5">
           <div
             class="absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] bg-white rounded-full shadow transition-transform
@@ -210,8 +210,8 @@
 
         <!-- Toggle: Variant -->
         <div
-          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0
-                max-[400px]:basis-1/2 max-[400px]:w-auto max-[400px]:min-w-0 max-[400px]:shrink
+          class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0 max-w-full
+                max-[400px]:basis-full max-[400px]:w-full max-[400px]:min-w-0 max-[400px]:shrink
                 max-[400px]:h-8 max-[400px]:p-0.5"
           :class="device === 'mobile' ? 'opacity-40 pointer-events-none' : ''">
           <div
@@ -239,14 +239,14 @@
 
       <!-- Mobile: show BOTH states side-by-side -->
       <template x-if="device==='mobile'">
-        <div class="grid grid-cols-2 gap-4 items-start max-w-[37.5rem] mx-auto">
-          <figure class="space-y-1 max-w-[17.5rem] mx-auto">
+        <div class="grid grid-cols-2 gap-3 items-start max-w-[21rem] sm:max-w-[37.5rem] mx-auto">
+          <figure class="space-y-1 max-w-[9.75rem] sm:max-w-[17.5rem] mx-auto">
             <figcaption class="text-center text-xs text-gray-600">Control</figcaption>
             <img src="images/Options_Mobile_Control.png"
                 alt="Options Page Control Mobile"
                 class="rounded-lg border border-gray-200 shadow w-full" />
           </figure>
-          <figure class="space-y-1 max-w-[17.5rem] mx-auto">
+          <figure class="space-y-1 max-w-[9.75rem] sm:max-w-[17.5rem] mx-auto">
             <figcaption class="text-center text-xs text-gray-600">Basket (Collapsed)</figcaption>
             <img src="images/Options_Mobile_Basket_collapsed.png"
                 alt="Options Page Basket Mobile"
