@@ -63,7 +63,6 @@
         <li>Drove discovery, prioritization, experiment design, and rollout decisions</li>
         <li>Led cross-functional delivery with engineering, UX, research, QA, and BI</li>
       </ul>
-      </br>
       <p class="text-gray-700">We prioritized a persistent basket over broader redesign alternatives because it directly targeted decision friction and could be tested quickly with clear guardrails. We deprioritized lower-confidence visual refinements until core conversion gains were validated.</p>
     </div> 
 
@@ -89,7 +88,7 @@
     
     <div class="mb-10">
       <h2 class="section-title text-gray-800 mb-2">Experiments & Outcomes</h2>
-      <div class="space-y-4 text-gray-700">
+      <div class="space-y-4 text-gray-700 text-sm md:text-base">
         <div>
           <p class="font-semibold text-gray-900">Experiment 1: Offer and Options Page</p>
           <ul class="list-disc list-inside mt-2 space-y-1">
@@ -117,13 +116,13 @@
 
     <div class="glass-card p-5 md:p-6 mb-8 md:mb-10">
     <h3 class="text-lg font-semibold text-gray-900 mb-2">Experiment 1: Initial Basket (Mobile + Desktop)</h3>
-    <p class="muted-proof mb-5">Persistent tariff context and CTA visibility across the step.</p>
+    <p class="muted-proof mb-4 md:mb-5">Persistent tariff context and CTA visibility across the step.</p>
     <!-- Offer Page (faithful Alpine-style switches, like the Before/After in info-gap) -->
     <div id="offer-page" class="mb-8 scroll-mt-28" x-data="{ device: 'desktop', variant: 'control' }">
       <h2 class="text-lg font-semibold text-gray-800 mb-4">Offer Page</h2>
 
       <!-- Toggles Row (always one line; scales below 400px) -->
-      <div class="flex items-center gap-3 mb-6 flex-wrap sm:flex-nowrap max-[400px]:gap-1">
+      <div class="flex items-center gap-3 mb-5 md:mb-6 flex-wrap sm:flex-nowrap max-[400px]:gap-1">
         <!-- Device -->
         <div
           class="relative inline-flex items-center bg-gray-100 rounded-full p-1 h-9 w-44 shrink-0 max-w-full
@@ -271,7 +270,7 @@
 
   <div class="glass-card p-5 md:p-6 mb-8 md:mb-10">
     <h3 class="text-lg font-semibold text-gray-900 mb-2">Experiment 2: Desktop Iteration</h3>
-    <p class="muted-proof mb-5">A tighter desktop refinement based on learnings from the initial release.</p>
+    <p class="muted-proof mb-4 md:mb-5">A tighter desktop refinement based on learnings from the initial release.</p>
   <!-- Desktop Iteration -->
     <div id="iteration-desktop" class="mb-6 scroll-mt-28" x-data="{ device: 'desktop', variant: 'control' }">
       <h2 class="text-lg font-semibold text-gray-800 mb-4">Iteration Basket Desktop</h2>

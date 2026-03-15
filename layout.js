@@ -282,25 +282,25 @@ function injectGlobalTheme() {
 
     @media (max-width: 768px) {
       .page-shell {
-        padding: 2.15rem 1rem 2.9rem;
+        padding: 1.85rem 0.95rem 2.5rem;
       }
 
       .page-intro {
-        margin-bottom: 2rem;
+        margin-bottom: 1.6rem;
       }
 
       .page-title {
-        font-size: clamp(1.9rem, 8vw, 2.4rem);
+        font-size: clamp(1.85rem, 7.2vw, 2.3rem);
         margin-bottom: 0.55rem;
       }
 
       .page-subtitle {
-        font-size: 0.96rem;
-        line-height: 1.5;
+        font-size: 0.93rem;
+        line-height: 1.45;
       }
 
       .section-title {
-        font-size: 1.28rem;
+        font-size: 1.2rem;
       }
 
       .plain-section + .plain-section {
@@ -315,11 +315,20 @@ function injectGlobalTheme() {
       }
 
       .summary-cell {
-        padding: 0.95rem 0.95rem 0.9rem;
+        padding: 0.88rem 0.9rem 0.86rem;
       }
 
       .summary-value {
-        font-size: 1.18rem;
+        font-size: 1.1rem;
+      }
+
+      .summary-note {
+        font-size: 0.85rem;
+      }
+
+      .ui-chip {
+        padding: 0.24rem 0.62rem;
+        font-size: 0.7rem;
       }
 
       .glass-card {
